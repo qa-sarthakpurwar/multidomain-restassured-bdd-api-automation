@@ -1,21 +1,14 @@
 package com.sarthak.stepdefinitions;
 
 import static io.restassured.RestAssured.given;
-
 import static org.junit.Assert.assertEquals;
-
 import java.io.FileNotFoundException;
-
 import com.sarthak.api.resources.APIResources;
 import com.sarthak.api.utils.Utils;
 import com.sarthak.placeapi.pojo.PojoUtilities;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import junit.framework.Assert;
@@ -109,32 +102,23 @@ public class PlaceAPISteps extends Utils {
 	@Then("the {string} response body should contain {string} as {string}")
 	public void the_response_body_should_contain_as(String responseType, String key, String value) {
 
+		String actualValue = "";
+		String expectedValue = getProperty(value);
+
 		if (responseType.equalsIgnoreCase("addPlaceResponse")) {
-			JsonPath js = new JsonPath(addPlaceResponse.then().extract().response().asString());
-			String actualValue = js.getString(key);
-			String expectedValue = getProperty(value);
 
+			actualValue = getParsedJSONString(addPlaceResponse.then().extract().response().asString(), key);
 			assertEquals("Mismatch on field: " + key, expectedValue, actualValue);
-		} else if (responseType.equalsIgnoreCase("getPlaceResponse")) {
-			JsonPath js = new JsonPath(getPlaceResponse.then().extract().response().asString());
-			String actualValue = js.getString(key);
-			String expectedValue = getProperty(value);
 
+		} else if (responseType.equalsIgnoreCase("getPlaceResponse")) {
+			actualValue = getParsedJSONString(getPlaceResponse.then().extract().response().asString(), key);
 			assertEquals("Mismatch on field: " + key, expectedValue, actualValue);
 		} else if (responseType.equalsIgnoreCase("updatePlaceResponse")) {
-			JsonPath js = new JsonPath(updatePlaceResponse.then().extract().response().asString());
-			String actualValue = js.getString(key);
-			String expectedValue = getProperty(value);
-
+			actualValue = getParsedJSONString(updatePlaceResponse.then().extract().response().asString(), key);
 			assertEquals("Mismatch on field: " + key, expectedValue, actualValue);
-		}else
-		{
-			JsonPath js = new JsonPath(deletePlaceResponse.then().extract().response().asString());
-			String actualValue = js.getString(key);
-			String expectedValue = getProperty(value);
-
+		} else {
+			actualValue = getParsedJSONString(deletePlaceResponse.then().extract().response().asString(), key);
 			assertEquals("Mismatch on field: " + key, expectedValue, actualValue);
-			
 		}
 
 	}
@@ -142,22 +126,20 @@ public class PlaceAPISteps extends Utils {
 	@Then("the {string} response body should contain a valid {string}")
 	public void the_response_body_should_contain_a_valid(String responseType, String placeId) {
 
-		if (responseType.equalsIgnoreCase("addPlaceResponse")) {
+		String actualValue;
 
-			JsonPath js = new JsonPath(addPlaceResponse.then().extract().response().asString());
-			String actualValue = js.getString(placeId);
+		if (responseType.equalsIgnoreCase("addPlaceResponse")) {
+			actualValue = getParsedJSONString(addPlaceResponse.then().extract().response().asString(), placeId);
 			Assert.assertNotNull("Field '" + placeId + "' should not be null", actualValue);
 		} else if (responseType.equalsIgnoreCase("getPlaceResponse")) {
-			JsonPath js = new JsonPath(getPlaceResponse.then().extract().response().asString());
-			String actualValue = js.getString(placeId);
+			actualValue = getParsedJSONString(getPlaceResponse.then().extract().response().asString(), placeId);
 			Assert.assertNotNull("Field '" + placeId + "' should not be null", actualValue);
 		}
 	}
 
 	@When("I store the {string} from the response")
 	public void i_store_the_from_the_response(String placeId) {
-		JsonPath js = new JsonPath(addPlaceResponse.then().extract().response().asString());
-		String placeIdValue = js.getString(placeId);
+		String placeIdValue = getParsedJSONString(addPlaceResponse.then().extract().response().asString(), placeId);
 		if (placeId != null) {
 			place_id = placeIdValue;
 		} else {
@@ -170,12 +152,5 @@ public class PlaceAPISteps extends Utils {
 		place_id = getProperty("stored.place_id");
 		System.out.println(place_id);
 	}
-	
-	@When("I execute complete CRUD flow")
-	public void i_execute_complete_crud_flow() {
-     
-	}
-
-
 
 }
