@@ -60,7 +60,6 @@
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>6.0.0</version>
-			<scope>test</scope>
 		</dependency>
 
 <!-- Source: https://mvnrepository.com/artifact/junit/junit -->
@@ -107,6 +106,11 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>Bdd</groupId>
+			<artifactId>E2ECucumberAPIFramework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	
 	
