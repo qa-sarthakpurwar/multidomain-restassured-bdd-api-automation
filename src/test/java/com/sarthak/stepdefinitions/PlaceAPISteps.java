@@ -38,8 +38,7 @@ public class PlaceAPISteps extends Utils {
 		int statusCode = given().queryParam("key", getProperty("api.key")).when().get(getProperty("base.url"))
 				.getStatusCode();
 		Assert.assertTrue("API is down!", statusCode < 500);
-		Assert.assertTrue("API is down!", statusCode < 500);
-		Assert.assertTrue("API is down!", statusCode < 500);
+
 
 	}
 
