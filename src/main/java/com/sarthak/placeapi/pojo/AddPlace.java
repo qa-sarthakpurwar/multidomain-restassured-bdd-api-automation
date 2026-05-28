@@ -2,7 +2,7 @@ package com.sarthak.placeapi.pojo;
 
 import java.util.List;
 
-public class AddPlaceRequest {
+public class AddPlace {
 	
 	private  Location location;
 	private int accuracy;

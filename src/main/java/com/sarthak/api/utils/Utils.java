@@ -3,6 +3,7 @@ package com.sarthak.api.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Properties;
 
@@ -31,6 +32,18 @@ public class Utils {
 		return properties.getProperty(key);
 	}
 
+	public static void setProperty(String key, String value) {
+	    try {
+	        properties.setProperty(key, value);
+	        FileOutputStream output = new FileOutputStream(
+	                "src\\test\\resources\\TestData\\TestData.properties");
+	        properties.store(output, null);
+	        output.close();
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
 	public static RequestSpecification getPlaceRequestSpec() throws FileNotFoundException {
 		if (requestSpec == null) {
 

@@ -5,8 +5,8 @@ import java.util.List;
 
 public class PojoUtilities {
 
-	public AddPlaceRequest addPlacePayload(String name, String address, String language) {
-		AddPlaceRequest addPlaceObject = new AddPlaceRequest();
+	public AddPlace addPlacePayload(String name, String address, String language) {
+		AddPlace addPlaceObject = new AddPlace();
 
 		Location locationObject = new Location();
 		locationObject.setLat(-38.383494);
@@ -27,6 +27,22 @@ public class PojoUtilities {
 		addPlaceObject.setLanguage(language);
 
 		return addPlaceObject;
+	}
+
+	public UpdatePlace updatePlacePayload(String place_id, String address, String key) {
+		UpdatePlace updatePlaceObject = new UpdatePlace();
+
+		updatePlaceObject.setPlace_id(place_id);
+		updatePlaceObject.setAddress(address);
+		updatePlaceObject.setKey(key);
+
+		return updatePlaceObject;
+	}
+
+	public DeletePlace deletePlacePayload(String place_id) {
+		DeletePlace deletePlaceObject = new DeletePlace();
+		deletePlaceObject.setPlace_id(place_id);
+		return deletePlaceObject;
 	}
 
 }
