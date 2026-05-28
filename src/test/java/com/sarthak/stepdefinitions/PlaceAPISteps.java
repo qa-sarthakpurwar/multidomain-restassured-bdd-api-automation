@@ -39,6 +39,7 @@ public class PlaceAPISteps extends Utils {
 				.getStatusCode();
 		Assert.assertTrue("API is down!", statusCode < 500);
 		Assert.assertTrue("API is down!", statusCode < 500);
+		Assert.assertTrue("API is down!", statusCode < 500);
 
 	}
 
