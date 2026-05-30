@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 
 		features = "src\\test\\resources\\features", plugin = { "json:target/jsonReports/cucumber-report.json",  "pretty"} , 
 
-		glue = "com.sarthak.stepdefinitions", tags = "@E2E",
+		glue = "com.sarthak.stepdefinitions", tags = "@AddProduct",
 
 		// ── Report ─────────────────────────────────────────────────
 
