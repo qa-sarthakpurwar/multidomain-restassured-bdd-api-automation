@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import io.restassured.builder.RequestSpecBuilder;
@@ -102,5 +104,26 @@ public class Utils {
 
 		return requestSpec;
 }
+	
+	
+	
+	protected static List<String> getProductData() {
+	    List<String> data = new ArrayList<>();
+	    data.add(getProperty("productId"));
+	    data.add(getProperty("productName"));
+	    data.add(getProperty("productCategory"));
+	    data.add("watch");
+	    data.add(getProperty("productPrice"));
+	    data.add(getProperty("productDescription"));
+	    data.add(getProperty("data.productImage"));
+	    data.add("0");
+	    data.add("0");
+	    data.add("true");
+	    data.add(getProperty("productFor"));
+	    data.add(getProperty("userId"));
+	    data.add("0");
+	    data.add(getProperty("userId"));
+	    return data;
+	}
 	
 }

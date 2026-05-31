@@ -8,9 +8,10 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features", plugin = { "json:target/jsonReports/cucumber-report.json",  "pretty"} , 
+		features = "src\\test\\resources\\features", plugin = { "json:target/jsonReports/cucumber-report.json",
+				"pretty" },
 
-		glue = "com.sarthak.stepdefinitions", tags = "@AddProduct",
+		glue = { "com.sarthak.stepdefinitions", "com.sarthak.hooks" }, tags = "@ECommerceAPI",
 
 		// ── Report ─────────────────────────────────────────────────
 
@@ -22,8 +23,8 @@ import io.cucumber.junit.CucumberOptions;
 
 		// ── Show monochrome console output ─────────────────────────
 		monochrome = true
-		
-		)
+
+)
 public class TestRunner {
 
 }

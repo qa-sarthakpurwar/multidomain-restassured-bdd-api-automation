@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.sarthak.runner.TestRunner" time="37.44" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.sarthak.runner.TestRunner" time="7.823" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\qasar\AppData\Local\Temp\surefire7666715685594875569\surefirebooter-20260528220614556_3.jar C:\Users\qasar\AppData\Local\Temp\surefire7666715685594875569 2026-05-28T22-06-14_452-jvmRun1 surefire-20260528220614556_1tmp surefire_0-20260528220614556_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\qasar\AppData\Local\Temp\surefire14875409118621706590\surefirebooter-20260531183252756_3.jar C:\Users\qasar\AppData\Local\Temp\surefire14875409118621706590 2026-05-31T18-32-52_650-jvmRun1 surefire-20260531183252756_1tmp surefire_0-20260531183252756_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\target\test-classes;C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\target\classes;C:\Users\qasar\.m2\repository\io\rest-assured\rest-assured\6.0.0\rest-assured-6.0.0.jar;C:\Users\qasar\.m2\repository\org\apache\groovy\groovy\5.0.3\groovy-5.0.3.jar;C:\Users\qasar\.m2\repository\org\apache\groovy\groovy-xml\5.0.3\groovy-xml-5.0.3.jar;C:\Users\qasar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\qasar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\qasar\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\qasar\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\qasar\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\qasar\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\qasar\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\qasar\.m2\repository\io\rest-assured\json-path\6.0.0\json-path-6.0.0.jar;C:\Users\qasar\.m2\repository\org\apache\groovy\groovy-json\5.0.3\groovy-json-5.0.3.jar;C:\Users\qasar\.m2\repository\io\rest-assured\rest-assured-common\6.0.0\rest-assured-common-6.0.0.jar;C:\Users\qasar\.m2\repository\io\rest-assured\xml-path\6.0.0\xml-path-6.0.0.jar;C:\Users\qasar\.m2\repository\org\apache\commons\commons-lang3\3.19.0\commons-lang3-3.19.0.jar;C:\Users\qasar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\qasar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\qasar\.m2\repository\io\cucumber\cucumber-java\7.34.3\cucumber-java-7.34.3.jar;C:\Users\qasar\.m2\repository\io\cucumber\cucumber-core\7.34.3\cucumber-core-7.34.3.jar;C:\Users\qasar\.m2\repository\io\cucumber\cucumber-gherkin\7.34.3\cucumber-gherkin-7.34.3.jar;C:\Users\qasar\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.34.3\cucumber-gherkin-messages-7.34.3.jar;C:\Users\qasar\.m2\repository\io\cucumber\gherkin\36.1.0\gherkin-36.1.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\messages\30.1.0\messages-30.1.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\messages-ndjson\0.3.2\messages-ndjson-0.3.2.jar;C:\Users\qasar\.m2\repository\io\cucumber\pretty-formatter\2.4.1\pretty-formatter-2.4.1.jar;C:\Users\qasar\.m2\repository\io\cucumber\query\14.7.0\query-14.7.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\teamcity-formatter\0.2.0\teamcity-formatter-0.2.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\testng-xml-formatter\0.7.0\testng-xml-formatter-0.7.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\usage-formatter\0.1.0\usage-formatter-0.1.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\tag-expressions\8.1.0\tag-expressions-8.1.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\cucumber-expressions\18.1.0\cucumber-expressions-18.1.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\cucumber-json-formatter\0.3.2\cucumber-json-formatter-0.3.2.jar;C:\Users\qasar\.m2\repository\io\cucumber\datatable\7.34.3\datatable-7.34.3.jar;C:\Users\qasar\.m2\repository\io\cucumber\cucumber-plugin\7.34.3\cucumber-plugin-7.34.3.jar;C:\Users\qasar\.m2\repository\io\cucumber\docstring\7.34.3\docstring-7.34.3.jar;C:\Users\qasar\.m2\repository\io\cucumber\html-formatter\22.3.0\html-formatter-22.3.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\junit-xml-formatter\0.11.0\junit-xml-formatter-0.11.0.jar;C:\Users\qasar\.m2\repository\io\cucumber\ci-environment\12.0.0\ci-environment-12.0.0.jar;C:\Users\qasar\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\qasar\.m2\repository\io\cucumber\cucumber-junit\7.34.3\cucumber-junit-7.34.3.jar;C:\Users\qasar\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.21.3\jackson-databind-2.21.3.jar;C:\Users\qasar\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.21\jackson-annotations-2.21.jar;C:\Users\qasar\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.21.3\jackson-core-2.21.3.jar;C:\Users\qasar\.m2\repository\org\codehaus\groovy\groovy\3.0.25\groovy-3.0.25.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\qasar\AppData\Local\Temp\surefire7666715685594875569\surefirebooter-20260528220614556_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\qasar\AppData\Local\Temp\surefire14875409118621706590\surefirebooter-20260531183252756_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
@@ -58,166 +58,178 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="TC01 - Verify user can add a place with valid payload" classname="Place API - CRUD Operations" time="2.702">
+  <testcase name="TC01 - Verify user can login with valid credentials" classname="E-Commerce API - CRUD Operations" time="2.525">
     <system-out><![CDATA[
-@PlaceAPI @Regression @AddPlace @TC01
-Scenario: TC01 - Verify user can add a place with valid payload                               # src/test/resources/features/PlaceAPI.feature:14
-  ✔ Given the Place API is up and running                                                     # com.sarthak.stepdefinitions.PlaceAPISteps.the_place_api_is_up_and_running()
-  ✔ Given I have a valid add place request payload                                            # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_add_place_request_payload()
-/maps/api/place/add/json
-  ✔ When I send a "POST" request to add place endpoint with "AddPlaceAPI"                     # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "addPlaceResponse" response status code should be 200                            # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "addPlaceResponse" response body should contain "status" as "add.response.status" # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "addPlaceResponse" response body should contain a valid "place_id"                # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_a_valid(java.lang.String,java.lang.String)
-  ✔ And the "addPlaceResponse" response body should contain "scope" as "add.response.scope"   # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+@ECommerceAPI @Regression @Login @TC01
+Scenario: TC01 - Verify user can login with valid credentials                                    # src/test/resources/features/EcommerceAPI.feature:14
+  ✔ Given I have a valid login request payload                                                   # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_login_request_payload()
+/api/ecom/auth/login
+  ✔ When I send a "POST" request to endpoint with "LoginAPI"                                     # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "loginResponse" response status code should be 200                                  # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And the "loginResponse" response body should contain a valid "token"                         # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_a_valid(java.lang.String,java.lang.String)
+  ✔ And the "loginResponse" response body should contain a valid "userId"                        # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_a_valid(java.lang.String,java.lang.String)
+  ✔ And the "loginResponse" response body should contain "message" as "ecomm.login.response.msg" # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
 ]]></system-out>
   </testcase>
-  <testcase name="TC02 - Verify place is persisted correctly after adding" classname="Place API - CRUD Operations" time="2.34">
+  <testcase name="TC02 - Verify user can add a product with valid payload" classname="E-Commerce API - CRUD Operations" time="0.661">
     <system-out><![CDATA[
-@PlaceAPI @RegressionI @GetPlace @TC02
-Scenario: TC02 - Verify place is persisted correctly after adding                           # src/test/resources/features/PlaceAPI.feature:26
-  ✔ Given the Place API is up and running                                                   # com.sarthak.stepdefinitions.PlaceAPISteps.the_place_api_is_up_and_running()
-  ✔ Given I have a valid add place request payload                                          # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_add_place_request_payload()
-/maps/api/place/add/json
-  ✔ When I send a "POST" request to add place endpoint with "AddPlaceAPI"                   # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ And I store the "place_id" from the response                                            # com.sarthak.stepdefinitions.PlaceAPISteps.i_store_the_from_the_response(java.lang.String)
-  ✔ Given I have a valid get place request                                                  # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_get_place_request()
-/maps/api/place/get/json
-  ✔ When I send a "GET" request to add place endpoint with "GetPlaceAPI"                    # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "getPlaceResponse" response status code should be 200                          # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "getPlaceResponse" response body should contain "name" as "place.name"          # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "getPlaceResponse" response body should contain "address" as "place.address"    # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "getPlaceResponse" response body should contain "phone_number" as "place.phone" # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "getPlaceResponse" response body should contain "website" as "place.website"    # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "getPlaceResponse" response body should contain "language" as "place.language"  # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+@ECommerceAPI @Regression @AddProduct @TC02
+Scenario: TC02 - Verify user can add a product with valid payload                                          # src/test/resources/features/EcommerceAPI.feature:26
+  ✔ Given I have a valid login request payload                                                             # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_login_request_payload()
+/api/ecom/auth/login
+  ✔ When I send a "POST" request to endpoint with "LoginAPI"                                               # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "token" from the "loginResponse" response                                              # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ And I store the "userId" from the "loginResponse" response                                             # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid add product request payload                                                       # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_add_product_request_payload()
+/api/ecom/product/add-product
+  ✔ When I send a "POST" request to endpoint with "AddProductAPI"                                          # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "productId" from the "addProductResponse" response                                     # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Then the "addProductResponse" response status code should be 201                                       # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And the "addProductResponse" response body should contain a valid "productId"                          # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_a_valid(java.lang.String,java.lang.String)
+  ✔ And the "addProductResponse" response body should contain "message" as "ecomm.addProduct.response.msg" # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+Running cleanup after: TC02 - Verify user can add a product with valid payload
+/api/ecom/product/delete-product/{productId}
 ]]></system-out>
   </testcase>
-  <testcase name="TC03 - Verify user can update the address of an existing place" classname="Place API - CRUD Operations" time="5.278">
+  <testcase name="TC03 - Verify product is persisted correctly after adding" classname="E-Commerce API - CRUD Operations" time="0.636">
     <system-out><![CDATA[
-@PlaceAPI @Regression @UpdatePlace @TC03
-Scenario: TC03 - Verify user can update the address of an existing place                         # src/test/resources/features/PlaceAPI.feature:43
-  ✔ Given the Place API is up and running                                                        # com.sarthak.stepdefinitions.PlaceAPISteps.the_place_api_is_up_and_running()
-  ✔ Given I have a valid add place request payload                                               # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_add_place_request_payload()
-/maps/api/place/add/json
-  ✔ When I send a "POST" request to add place endpoint with "AddPlaceAPI"                        # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ And I store the "place_id" from the response                                                 # com.sarthak.stepdefinitions.PlaceAPISteps.i_store_the_from_the_response(java.lang.String)
-  ✔ Given I have a valid update place request with new address                                   # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_update_place_request_with_new_address()
-/maps/api/place/update/json
-  ✔ When I send a "PUT" request to add place endpoint with "UpdatePlaceAPI"                      # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "updatePlaceResponse" response status code should be 200                            # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "updatePlaceResponse" response body should contain "msg" as "update.response.msg"    # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ Given I have a valid get place request                                                       # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_get_place_request()
-/maps/api/place/get/json
-  ✔ When I send a "GET" request to add place endpoint with "GetPlaceAPI"                         # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "getPlaceResponse" response status code should be 200                               # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "getPlaceResponse" response body should contain "address" as "place.updated.address" # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+@ECommerceAPI @Regression @GetProduct @TC03
+Scenario: TC03 - Verify product is persisted correctly after adding                                                    # src/test/resources/features/EcommerceAPI.feature:42
+  ✔ Given I have a valid login request payload                                                                         # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_login_request_payload()
+/api/ecom/auth/login
+  ✔ When I send a "POST" request to endpoint with "LoginAPI"                                                           # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "token" from the "loginResponse" response                                                          # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid add product request payload                                                                   # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_add_product_request_payload()
+/api/ecom/product/add-product
+  ✔ When I send a "POST" request to endpoint with "AddProductAPI"                                                      # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "productId" from the "addProductResponse" response                                                 # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid get product detail request payload                                                            # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_get_product_detail_request_payload()
+/api/ecom/product/get-product-detail/{productId}
+  ✔ When I send a "GET" request to endpoint with "GetProductDetailAPI"                                                 # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "getProductDetailResponse" response status code should be 200                                             # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And the "getProductDetailResponse" response body should contain "message" as "ecomm.getProductDetail.response.msg" # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+Running cleanup after: TC03 - Verify product is persisted correctly after adding
+/api/ecom/product/delete-product/{productId}
 ]]></system-out>
   </testcase>
-  <testcase name="TC04 - Verify user can delete an existing place" classname="Place API - CRUD Operations" time="5.555">
+  <testcase name="TC04 - Verify user can add product to cart" classname="E-Commerce API - CRUD Operations" time="0.787">
     <system-out><![CDATA[
-@PlaceAPI @Regression @DeletePlace @TC04
-Scenario: TC04 - Verify user can delete an existing place                                            # src/test/resources/features/PlaceAPI.feature:60
-  ✔ Given the Place API is up and running                                                            # com.sarthak.stepdefinitions.PlaceAPISteps.the_place_api_is_up_and_running()
-  ✔ Given I have a valid add place request payload                                                   # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_add_place_request_payload()
-/maps/api/place/add/json
-  ✔ When I send a "POST" request to add place endpoint with "AddPlaceAPI"                            # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ And I store the "place_id" from the response                                                     # com.sarthak.stepdefinitions.PlaceAPISteps.i_store_the_from_the_response(java.lang.String)
-  ✔ Given I have a valid delete place request with  valid  stored placeId                            # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_delete_place_request_with_valid_stored_place_id()
-/maps/api/place/delete/json
-  ✔ When I send a "DELETE" request to add place endpoint with "DeletePlaceAPI"                       # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "deletePlaceResponse" response status code should be 200                                # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "deletePlaceResponse" response body should contain "status" as "add.response.status"     # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ Given I have a valid get place request                                                           # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_get_place_request()
-/maps/api/place/get/json
-  ✔ When I send a "GET" request to add place endpoint with "GetPlaceAPI"                             # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "getPlaceResponse" response status code should be 404                                   # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "getPlaceResponse" response body should contain "msg" as "invalid.place.id.get.response" # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+@ECommerceAPI @Regression @AddToCart @TC04
+Scenario: TC04 - Verify user can add product to cart                                                     # src/test/resources/features/EcommerceAPI.feature:58
+  ✔ Given I have a valid login request payload                                                           # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_login_request_payload()
+/api/ecom/auth/login
+  ✔ When I send a "POST" request to endpoint with "LoginAPI"                                             # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "token" from the "loginResponse" response                                            # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid add product request payload                                                     # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_add_product_request_payload()
+/api/ecom/product/add-product
+  ✔ When I send a "POST" request to endpoint with "AddProductAPI"                                        # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "productId" from the "addProductResponse" response                                   # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid get product detail request payload                                              # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_get_product_detail_request_payload()
+/api/ecom/product/get-product-detail/{productId}
+  ✔ When I send a "GET" request to endpoint with "GetProductDetailAPI"                                   # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "getProductDetailResponse" response status code should be 200                               # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And I store the "data.productImage" from the "getProductDetailResponse" response                     # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid add to cart request payload                                                     # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_add_to_cart_request_payload()
+/api/ecom/user/add-to-cart
+  ✔ When I send a "POST" request to endpoint with "AddToCartAPI"                                         # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "addToCartResponse" response status code should be 200                                      # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And the "addToCartResponse" response body should contain "message" as "ecomm.addToCart.response.msg" # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+Running cleanup after: TC04 - Verify user can add product to cart
+/api/ecom/product/delete-product/{productId}
 ]]></system-out>
   </testcase>
-  <testcase name="TC05 - Verify API fails when invalid place_id is used in update request" classname="Place API - CRUD Operations" time="3.174">
+  <testcase name="TC05 - Verify user can create an order successfully" classname="E-Commerce API - CRUD Operations" time="0.688">
     <system-out><![CDATA[
-@PlaceAPI @Regression @UpdatePlace @TC05
-Scenario: TC05 - Verify API fails when invalid place_id is used in update request                          # src/test/resources/features/PlaceAPI.feature:77
-  ✔ Given the Place API is up and running                                                                  # com.sarthak.stepdefinitions.PlaceAPISteps.the_place_api_is_up_and_running()
-b3510aa6727e0179819bde5691d3e6f9
-  ✔ Given I have an invalid place_id                                                                       # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_an_invalid_place_id()
-  ✔ Given I have a valid update place request with new address                                             # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_update_place_request_with_new_address()
-/maps/api/place/update/json
-  ✔ When I send a "PUT" request to add place endpoint with "UpdatePlaceAPI"                                # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "updatePlaceResponse" response status code should be 404                                      # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "updatePlaceResponse" response body should contain "msg" as "invalid.place.id.update.response" # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+@ECommerceAPI @Regression @CreateOrder @TC05
+Scenario: TC05 - Verify user can create an order successfully                                             # src/test/resources/features/EcommerceAPI.feature:78
+  ✔ Given I have a valid login request payload                                                            # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_login_request_payload()
+/api/ecom/auth/login
+  ✔ When I send a "POST" request to endpoint with "LoginAPI"                                              # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "token" from the "loginResponse" response                                             # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid add product request payload                                                      # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_add_product_request_payload()
+/api/ecom/product/add-product
+  ✔ When I send a "POST" request to endpoint with "AddProductAPI"                                         # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "productId" from the "addProductResponse" response                                    # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid create order request payload                                                     # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_create_order_request_payload()
+/api/ecom/order/create-order
+  ✔ When I send a "POST" request to endpoint with "CreateOrderAPI"                                        # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "createOrderResponse" response status code should be 201                                     # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And the "createOrderResponse" response body should contain a valid "orders"                           # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_a_valid(java.lang.String,java.lang.String)
+  ✔ And the "createOrderResponse" response body should contain "message" as "ecomm.create.order.response" # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+  ✔ And the "createOrderResponse" response body should contain "productOrderId[0]" as "productId"         # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+Running cleanup after: TC05 - Verify user can create an order successfully
+/api/ecom/product/delete-product/{productId}
 ]]></system-out>
   </testcase>
-  <testcase name="TC06 - Verify API fails when non-existing place_id is used in delete request" classname="Place API - CRUD Operations" time="3.271">
+  <testcase name="TC06 - Verify order is persisted correctly after creation" classname="E-Commerce API - CRUD Operations" time="0.752">
     <system-out><![CDATA[
-@PlaceAPI @Regression @DeletePlace @TC06
-Scenario: TC06 - Verify API fails when non-existing place_id is used in delete request                     # src/test/resources/features/PlaceAPI.feature:88
-  ✔ Given the Place API is up and running                                                                  # com.sarthak.stepdefinitions.PlaceAPISteps.the_place_api_is_up_and_running()
-b3510aa6727e0179819bde5691d3e6f9
-  ✔ Given I have an invalid place_id                                                                       # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_an_invalid_place_id()
-  ✔ Given I have a valid delete place request with  valid  stored placeId                                  # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_delete_place_request_with_valid_stored_place_id()
-/maps/api/place/delete/json
-  ✔ When I send a "DELETE" request to add place endpoint with "DeletePlaceAPI"                             # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "deletePlaceResponse" response status code should be 404                                      # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "deletePlaceResponse" response body should contain "msg" as "invalid.place.id.delete.response" # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+@ECommerceAPI @Regression @GetOrder @TC06
+Scenario: TC06 - Verify order is persisted correctly after creation                                     # src/test/resources/features/EcommerceAPI.feature:96
+  ✔ Given I have a valid login request payload                                                          # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_login_request_payload()
+/api/ecom/auth/login
+  ✔ When I send a "POST" request to endpoint with "LoginAPI"                                            # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "token" from the "loginResponse" response                                           # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid add product request payload                                                    # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_add_product_request_payload()
+/api/ecom/product/add-product
+  ✔ When I send a "POST" request to endpoint with "AddProductAPI"                                       # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "productId" from the "addProductResponse" response                                  # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid create order request payload                                                   # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_create_order_request_payload()
+/api/ecom/order/create-order
+  ✔ When I send a "POST" request to endpoint with "CreateOrderAPI"                                      # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "createOrderResponse" response status code should be 201                                   # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And I store the "orders[0]" from the "createOrderResponse" response                                 # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid get order request                                                              # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_get_order_request()
+/api/ecom/order/get-orders-details
+  ✔ When I send a "GET" request to endpoint with "GetOrderAPI"                                          # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "getOrderResponse" response status code should be 200                                      # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And the "getOrderResponse" response body should contain "message" as "ecomm.get.order.response.msg" # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+Running cleanup after: TC06 - Verify order is persisted correctly after creation
+/api/ecom/product/delete-product/{productId}
 ]]></system-out>
   </testcase>
-  <testcase name="TC07 - Verify API fails with invalid or non-existing place_id in delete request" classname="Place API - CRUD Operations" time="2.159">
+  <testcase name="TC07 - Verify user can delete an existing order" classname="E-Commerce API - CRUD Operations" time="0.759">
     <system-out><![CDATA[
-@PlaceAPI @Regression @GetPlace @TC07
-Scenario: TC07 - Verify API fails with invalid or non-existing place_id in delete request            # src/test/resources/features/PlaceAPI.feature:99
-  ✔ Given the Place API is up and running                                                            # com.sarthak.stepdefinitions.PlaceAPISteps.the_place_api_is_up_and_running()
-b3510aa6727e0179819bde5691d3e6f9
-  ✔ Given I have an invalid place_id                                                                 # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_an_invalid_place_id()
-  ✔ Given I have a valid get place request                                                           # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_get_place_request()
-/maps/api/place/get/json
-  ✔ When I send a "GET" request to add place endpoint with "GetPlaceAPI"                             # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "getPlaceResponse" response status code should be 404                                   # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "getPlaceResponse" response body should contain "msg" as "invalid.place.id.get.response" # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+@ECommerceAPI @Regression @DeleteOrder @TC07
+Scenario: TC07 - Verify user can delete an existing order                                                     # src/test/resources/features/EcommerceAPI.feature:116
+  ✔ Given I have a valid login request payload                                                                # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_login_request_payload()
+/api/ecom/auth/login
+  ✔ When I send a "POST" request to endpoint with "LoginAPI"                                                  # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "token" from the "loginResponse" response                                                 # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid add product request payload                                                          # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_add_product_request_payload()
+/api/ecom/product/add-product
+  ✔ When I send a "POST" request to endpoint with "AddProductAPI"                                             # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "productId" from the "addProductResponse" response                                        # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid create order request payload                                                         # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_create_order_request_payload()
+/api/ecom/order/create-order
+  ✔ When I send a "POST" request to endpoint with "CreateOrderAPI"                                            # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "createOrderResponse" response status code should be 201                                         # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And I store the "orders[0]" from the "createOrderResponse" response                                       # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid delete order request payload                                                         # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_delete_order_request_payload()
+/api/ecom/order/delete-order/{orderId}
+  ✔ When I send a "DELETE" request to endpoint with "DeleteOrderAPI"                                          # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "deleteOrderResponse" response status code should be 200                                         # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And the "deleteOrderResponse" response body should contain "message" as "ecomm.delete.order.response.msg" # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+Running cleanup after: TC07 - Verify user can delete an existing order
+/api/ecom/product/delete-product/{productId}
 ]]></system-out>
   </testcase>
-  <testcase name="TC08 - Verify complete CRUD flow works correctly end to end" classname="Place API - CRUD Operations" time="12.439">
+  <testcase name="TC08 - Verify user can delete an existing product" classname="E-Commerce API - CRUD Operations" time="0.478">
     <system-out><![CDATA[
-@PlaceAPI @Regression @E2E @TC08 @Smoke
-Scenario: TC08 - Verify complete CRUD flow works correctly end to end                                # src/test/resources/features/PlaceAPI.feature:110
-  ✔ Given the Place API is up and running                                                            # com.sarthak.stepdefinitions.PlaceAPISteps.the_place_api_is_up_and_running()
-  ✔ Given I have a valid add place request payload                                                   # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_add_place_request_payload()
-/maps/api/place/add/json
-  ✔ When I send a "POST" request to add place endpoint with "AddPlaceAPI"                            # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "addPlaceResponse" response status code should be 200                                   # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "addPlaceResponse" response body should contain "status" as "add.response.status"        # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "addPlaceResponse" response body should contain a valid "place_id"                       # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_a_valid(java.lang.String,java.lang.String)
-  ✔ And the "addPlaceResponse" response body should contain "scope" as "add.response.scope"          # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And I store the "place_id" from the response                                                     # com.sarthak.stepdefinitions.PlaceAPISteps.i_store_the_from_the_response(java.lang.String)
-  ✔ Given I have a valid get place request                                                           # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_get_place_request()
-/maps/api/place/get/json
-  ✔ When I send a "GET" request to add place endpoint with "GetPlaceAPI"                             # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "getPlaceResponse" response status code should be 200                                   # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "getPlaceResponse" response body should contain "name" as "place.name"                   # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "getPlaceResponse" response body should contain "address" as "place.address"             # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "getPlaceResponse" response body should contain "phone_number" as "place.phone"          # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "getPlaceResponse" response body should contain "website" as "place.website"             # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ And the "getPlaceResponse" response body should contain "language" as "place.language"           # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ Given I have a valid update place request with new address                                       # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_update_place_request_with_new_address()
-/maps/api/place/update/json
-  ✔ When I send a "PUT" request to add place endpoint with "UpdatePlaceAPI"                          # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "updatePlaceResponse" response status code should be 200                                # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "updatePlaceResponse" response body should contain "msg" as "update.response.msg"        # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ Given I have a valid get place request                                                           # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_get_place_request()
-/maps/api/place/get/json
-  ✔ When I send a "GET" request to add place endpoint with "GetPlaceAPI"                             # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "getPlaceResponse" response status code should be 200                                   # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "getPlaceResponse" response body should contain "address" as "place.updated.address"     # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ Given I have a valid delete place request with  valid  stored placeId                            # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_delete_place_request_with_valid_stored_place_id()
-/maps/api/place/delete/json
-  ✔ When I send a "DELETE" request to add place endpoint with "DeletePlaceAPI"                       # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "deletePlaceResponse" response status code should be 200                                # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "deletePlaceResponse" response body should contain "status" as "add.response.status"     # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
-  ✔ Given I have a valid get place request                                                           # com.sarthak.stepdefinitions.PlaceAPISteps.i_have_a_valid_get_place_request()
-/maps/api/place/get/json
-  ✔ When I send a "GET" request to add place endpoint with "GetPlaceAPI"                             # com.sarthak.stepdefinitions.PlaceAPISteps.i_send_a_request_to_add_place_endpoint_with(java.lang.String,java.lang.String)
-  ✔ Then the "getPlaceResponse" response status code should be 404                                   # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
-  ✔ And the "getPlaceResponse" response body should contain "msg" as "invalid.place.id.get.response" # com.sarthak.stepdefinitions.PlaceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
+@ECommerceAPI @Regression @DeleteProduct @TC08
+Scenario: TC08 - Verify user can delete an existing product                                                       # src/test/resources/features/EcommerceAPI.feature:136
+  ✔ Given I have a valid login request payload                                                                    # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_login_request_payload()
+/api/ecom/auth/login
+  ✔ When I send a "POST" request to endpoint with "LoginAPI"                                                      # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "token" from the "loginResponse" response                                                     # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid add product request payload                                                              # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_add_product_request_payload()
+/api/ecom/product/add-product
+  ✔ When I send a "POST" request to endpoint with "AddProductAPI"                                                 # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ And I store the "productId" from the "addProductResponse" response                                            # com.sarthak.stepdefinitions.EcommerceAPISteps.i_store_the_from_the_response(java.lang.String,java.lang.String)
+  ✔ Given I have a valid delete product request payload                                                           # com.sarthak.stepdefinitions.EcommerceAPISteps.i_have_a_valid_delete_product_request_payload()
+/api/ecom/product/delete-product/{productId}
+  ✔ When I send a "DELETE" request to endpoint with "DeleteProductAPI"                                            # com.sarthak.stepdefinitions.EcommerceAPISteps.i_send_a_request_to_endpoint_with(java.lang.String,java.lang.String)
+  ✔ Then the "deleteProductResponse" response status code should be 200                                           # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_status_code_should_be(java.lang.String,java.lang.Integer)
+  ✔ And the "deleteProductResponse" response body should contain "message" as "ecomm.delete.product.resposne.msg" # com.sarthak.stepdefinitions.EcommerceAPISteps.the_response_body_should_contain_as(java.lang.String,java.lang.String,java.lang.String)
 ]]></system-out>
   </testcase>
 </testsuite>

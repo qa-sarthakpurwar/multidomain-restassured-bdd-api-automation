@@ -1,5 +1,11 @@
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\api\resources\APIResources.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\api\utils\Utils.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\AddToCart.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\CreateOrder.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\CreateOrderDetail.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\EcommPojoUtilities.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\LoginAPI.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\Product.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\placeapi\pojo\AddPlace.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\placeapi\pojo\DeletePlace.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\placeapi\pojo\Location.java

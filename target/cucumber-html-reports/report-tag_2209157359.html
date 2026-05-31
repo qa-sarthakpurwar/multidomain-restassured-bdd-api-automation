@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>cucumber-jvm-example</td>
         <td>1</td>
-      <td>28 May 2026, 22:06</td>
+      <td>31 May 2026, 18:33</td>
     </tr>
   </tbody>
 </table>
@@ -140,7 +140,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="874778100">0.874</td>
+          <td class="duration" data-value="2443797300">2.443</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -173,27 +173,27 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3107755502.html">Place API - CRUD Operations</a>
+      <a href="report-feature_911614229.html">E-Commerce API - CRUD Operations</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_63100914.html">@PlaceAPI</a>
+       <a href="report-tag_442055673.html">@ECommerceAPI</a>
        <a href="report-tag_2226523296.html">@Regression</a>
-       <a href="report-tag_1249235269.html">@AddPlace</a>
+       <a href="report-tag_4053346056.html">@Login</a>
        <a href="report-tag_2209157359.html">@TC01</a>
 </div>
 
 
-  <span class="lead-duration duration">0.874</span>
+  <span class="lead-duration duration">2.443</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">TC01 - Verify user can add a place with valid payload</span>
+  <span class="name">TC01 - Verify user can login with valid credentials</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -227,9 +227,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">I have a valid add place request payload</span>
+  <span class="name">I have a valid login request payload</span>
 
-  <span class="lead-duration duration">0.242</span>
+  <span class="lead-duration duration">0.804</span>
 
 </div>
 
@@ -254,9 +254,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">I send a <span class="argument">&quot;POST&quot;</span> request to add place endpoint with <span class="argument">&quot;AddPlaceAPI&quot;</span></span>
+  <span class="name">I send a <span class="argument">&quot;POST&quot;</span> request to endpoint with <span class="argument">&quot;LoginAPI&quot;</span></span>
 
-  <span class="lead-duration duration">0.236</span>
+  <span class="lead-duration duration">1.258</span>
 
 </div>
 
@@ -281,7 +281,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">the <span class="argument">&quot;addPlaceResponse&quot;</span> response status code should be <span class="argument">200</span></span>
+  <span class="name">the <span class="argument">&quot;loginResponse&quot;</span> response status code should be <span class="argument">200</span></span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -308,36 +308,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">the <span class="argument">&quot;addPlaceResponse&quot;</span> response body should contain <span class="argument">&quot;status&quot;</span> as <span class="argument">&quot;add.response.status&quot;</span></span>
+  <span class="name">the <span class="argument">&quot;loginResponse&quot;</span> response body should contain a valid <span class="argument">&quot;token&quot;</span></span>
 
-  <span class="lead-duration duration">0.381</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">the <span class="argument">&quot;addPlaceResponse&quot;</span> response body should contain a valid <span class="argument">&quot;place_id&quot;</span></span>
-
-  <span class="lead-duration duration">0.007</span>
+  <span class="lead-duration duration">0.364</span>
 
 </div>
 
@@ -362,7 +335,34 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">the <span class="argument">&quot;addPlaceResponse&quot;</span> response body should contain <span class="argument">&quot;scope&quot;</span> as <span class="argument">&quot;add.response.scope&quot;</span></span>
+  <span class="name">the <span class="argument">&quot;loginResponse&quot;</span> response body should contain a valid <span class="argument">&quot;userId&quot;</span></span>
+
+  <span class="lead-duration duration">0.009</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the <span class="argument">&quot;loginResponse&quot;</span> response body should contain <span class="argument">&quot;message&quot;</span> as <span class="argument">&quot;ecomm.login.response.msg&quot;</span></span>
 
   <span class="lead-duration duration">0.006</span>
 
