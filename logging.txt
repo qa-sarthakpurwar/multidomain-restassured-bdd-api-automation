@@ -1,62 +1,33 @@
 Request method:	POST
-Request URI:	https://rahulshettyacademy.com/api/ecom/auth/login
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
 Proxy:			<none>
 Request params:	<none>
-Query params:	<none>
+Query params:	key=qaclick123
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODAzMzY0NDYsImV4cCI6MTgxMTg5NDA0Nn0.XqBhnfTaNOzz0qE23xRyRteQr5pc4Hd2Jg_yOyIHWXg
-				Accept=*/*
+Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "userEmail": "signaturemusic12@gmail.com",
-    "userPassword": "AssertSuccess@204"
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "29, side layout, cohen 09",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "French-IN"
 }
 HTTP/1.1 200 OK
-Date: Mon, 01 Jun 2026 17:56:23 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
-X-DNS-Prefetch-Control: off
-Expect-CT: max-age=0
-X-Frame-Options: SAMEORIGIN
-Strict-Transport-Security: max-age=15552000; includeSubDomains
-X-Download-Options: noopen
-X-Content-Type-Options: nosniff
-X-Permitted-Cross-Domain-Policies: none
-Referrer-Policy: no-referrer
-X-XSS-Protection: 0
-Access-Control-Allow-Origin: *
-Content-Type: application/json; charset=utf-8
-Content-Length: 367
-ETag: W/"16f-HbBSeFQbB/678Pvuf0RTVytSicc"
-Vary: Accept-Encoding
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-
-{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODAzMzY1ODMsImV4cCI6MTgxMTg5NDE4M30.LkZ-VDgQ6dcrCri1fX0jzr8kuc7f48ATpLDZ1QbPWUg",
-    "userId": "63e1d725568c3e9fb10e43ac",
-    "message": "Login Successfully"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODAzMzY0NDYsImV4cCI6MTgxMTg5NDA0Nn0.XqBhnfTaNOzz0qE23xRyRteQr5pc4Hd2Jg_yOyIHWXg
-				Accept=*/*
-				Content-Type=text/plain; charset=ISO-8859-1
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{"location":{"lat":-38.383494,"lng":33.427362},"accuracy":50,"name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"29, side layout, cohen 09","types":["shoe park","shop"],"website":"http://google.com","language":"French-IN"}
-HTTP/1.1 200 OK
-Date: Mon, 01 Jun 2026 17:56:23 GMT
+Date: Mon, 01 Jun 2026 18:04:17 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Strict-Transport-Security: max-age=604800; includeSubDomains
 Access-Control-Allow-Origin: *
@@ -70,67 +41,8 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "27e0d2776ef0b1a2a49417c189724e10",
+    "place_id": "ea314dd17f4e08b43797ef28e109216d",
     "scope": "APP",
-    "reference": "31652f133e97a621aba62d35c698200131652f133e97a621aba62d35c6982001",
-    "id": "31652f133e97a621aba62d35c6982001"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?place_id=27e0d2776ef0b1a2a49417c189724e10
-Proxy:			<none>
-Request params:	<none>
-Query params:	place_id=27e0d2776ef0b1a2a49417c189724e10
-Form params:	<none>
-Path params:	<none>
-Headers:		Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODAzMzY0NDYsImV4cCI6MTgxMTg5NDA0Nn0.XqBhnfTaNOzz0qE23xRyRteQr5pc4Hd2Jg_yOyIHWXg
-				Accept=*/*
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Mon, 01 Jun 2026 17:56:24 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 0
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json; charset=UTF-8
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/api/ecom/product/delete-product/6a1dc67917ee3e78bab036c7
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	productId=6a1dc67917ee3e78bab036c7
-Headers:		Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODAzMzY0NDYsImV4cCI6MTgxMTg5NDA0Nn0.XqBhnfTaNOzz0qE23xRyRteQr5pc4Hd2Jg_yOyIHWXg
-				Accept=*/*
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 400 Bad Request
-Date: Mon, 01 Jun 2026 17:56:24 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
-X-DNS-Prefetch-Control: off
-Expect-CT: max-age=0
-X-Frame-Options: SAMEORIGIN
-Strict-Transport-Security: max-age=15552000; includeSubDomains
-X-Download-Options: noopen
-X-Content-Type-Options: nosniff
-X-Permitted-Cross-Domain-Policies: none
-Referrer-Policy: no-referrer
-X-XSS-Protection: 0
-Access-Control-Allow-Origin: *
-Content-Type: application/json; charset=utf-8
-Content-Length: 32
-ETag: W/"20-Alta7SQicX6keyjkfcyKRO1BZf8"
-Vary: Accept-Encoding
-Connection: close
-
-{
-    "message": "Product not foundd"
+    "reference": "2a00e6b72814f116daf51e01ee6860522a00e6b72814f116daf51e01ee686052",
+    "id": "2a00e6b72814f116daf51e01ee686052"
 }

@@ -10,7 +10,7 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 
-	@Before("not @Login")
+	@Before("@ECommerceAPI  and not @Login")
 	public void runLoginBeforeScenario(Scenario scenario) throws FileNotFoundException {
 		System.out.println("Running login before: " + scenario.getName());
 
@@ -21,7 +21,7 @@ public class Hooks {
 		stepDefinition.i_store_the_from_the_response("userId", "loginResponse");
 	}
 
-	@After("not @Login and not @DeleteProduct")
+	@After("@ECommerce and not @DeleteProduct")
 	public void runCleanupScenario(Scenario scenario) throws FileNotFoundException {
 
 		System.out.println("Running cleanup after: " + scenario.getName());
