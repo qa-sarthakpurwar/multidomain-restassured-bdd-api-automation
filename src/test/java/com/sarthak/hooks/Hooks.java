@@ -29,7 +29,7 @@ public class Hooks {
 		EcommerceAPISteps stepDefinition = new EcommerceAPISteps();
 		stepDefinition.i_have_a_valid_delete_product_request_payload();
 		stepDefinition.i_send_a_request_to_endpoint_with("DELETE", "DeleteProductAPI");
-		stepDefinition.the_response_status_code_should_be("deleteProductResponse", 200);
+		stepDefinition.ecommerce_response_status_code_should_be("deleteProductResponse", 200);
 
 	}
 

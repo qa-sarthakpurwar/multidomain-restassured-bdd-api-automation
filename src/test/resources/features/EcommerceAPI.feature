@@ -14,10 +14,10 @@ Feature: E-Commerce API - CRUD Operations
   Scenario: TC01 - Verify user can login with valid credentials
     Given I have a valid login request payload
     When I send a "POST" request to endpoint with "LoginAPI"
-    Then the "loginResponse" response status code should be 200
-    And the "loginResponse" response body should contain a valid "token"
-    And the "loginResponse" response body should contain a valid "userId"
-    And the "loginResponse" response body should contain "message" as "ecomm.login.response.msg"
+    Then ecommerce "loginResponse" response status code should be 200
+    And ecommerce "loginResponse" response body should contain a valid "token"
+    And ecommerce "loginResponse" response body should contain a valid "userId"
+    And ecommerce "loginResponse" response body should contain "message" as "ecomm.login.response.msg"
 
   # =====================================================================
   # ADD PRODUCT
@@ -27,9 +27,9 @@ Feature: E-Commerce API - CRUD Operations
     Given I have a valid add product request payload
     When I send a "POST" request to endpoint with "AddProductAPI"
      And I store the "productId" from the "addProductResponse" response
-    Then the "addProductResponse" response status code should be 201
-    And the "addProductResponse" response body should contain a valid "productId"
-    And the "addProductResponse" response body should contain "message" as "ecomm.addProduct.response.msg"
+    Then ecommerce "addProductResponse" response status code should be 201
+    And ecommerce "addProductResponse" response body should contain a valid "productId"
+    And ecommerce "addProductResponse" response body should contain "message" as "ecomm.addProduct.response.msg"
 
   # =====================================================================
   # GET PRODUCT DETAIL
@@ -41,8 +41,8 @@ Feature: E-Commerce API - CRUD Operations
     And I store the "productId" from the "addProductResponse" response
     Given I have a valid get product detail request payload
     When I send a "GET" request to endpoint with "GetProductDetailAPI"
-    Then the "getProductDetailResponse" response status code should be 200
-    And the "getProductDetailResponse" response body should contain "message" as "ecomm.getProductDetail.response.msg"
+    Then ecommerce "getProductDetailResponse" response status code should be 200
+    And ecommerce "getProductDetailResponse" response body should contain "message" as "ecomm.getProductDetail.response.msg"
 # =====================================================================
 # ADD PRODUCT  TO CART
 # =====================================================================
@@ -54,12 +54,12 @@ Feature: E-Commerce API - CRUD Operations
     And I store the "productId" from the "addProductResponse" response
     Given I have a valid get product detail request payload
     When I send a "GET" request to endpoint with "GetProductDetailAPI"
-    Then the "getProductDetailResponse" response status code should be 200
+    Then ecommerce "getProductDetailResponse" response status code should be 200
     And I store the "data.productImage" from the "getProductDetailResponse" response
     Given I have a valid add to cart request payload
     When I send a "POST" request to endpoint with "AddToCartAPI"
-    Then the "addToCartResponse" response status code should be 200
-    And the "addToCartResponse" response body should contain "message" as "ecomm.addToCart.response.msg"
+    Then ecommerce "addToCartResponse" response status code should be 200
+    And ecommerce "addToCartResponse" response body should contain "message" as "ecomm.addToCart.response.msg"
 
   # =====================================================================
   # CREATE ORDER
@@ -71,10 +71,10 @@ Feature: E-Commerce API - CRUD Operations
     And I store the "productId" from the "addProductResponse" response
     Given I have a valid create order request payload
     When I send a "POST" request to endpoint with "CreateOrderAPI"
-    Then the "createOrderResponse" response status code should be 201
-    And the "createOrderResponse" response body should contain a valid "orders"
-    And the "createOrderResponse" response body should contain "message" as "ecomm.create.order.response"
-    And the "createOrderResponse" response body should contain "productOrderId[0]" as "productId"
+    Then ecommerce "createOrderResponse" response status code should be 201
+    And ecommerce "createOrderResponse" response body should contain a valid "orders"
+    And ecommerce "createOrderResponse" response body should contain "message" as "ecomm.create.order.response"
+    And ecommerce "createOrderResponse" response body should contain "productOrderId[0]" as "productId"
 
   # =====================================================================
   # GET ORDER
@@ -86,12 +86,12 @@ Feature: E-Commerce API - CRUD Operations
     And I store the "productId" from the "addProductResponse" response
     Given I have a valid create order request payload
     When I send a "POST" request to endpoint with "CreateOrderAPI"
-    Then the "createOrderResponse" response status code should be 201
+    Then ecommerce "createOrderResponse" response status code should be 201
     And I store the "orders[0]" from the "createOrderResponse" response
     Given I have a valid get order request
     When I send a "GET" request to endpoint with "GetOrderAPI"
-    Then the "getOrderResponse" response status code should be 200
-    And the "getOrderResponse" response body should contain "message" as "ecomm.get.order.response.msg"
+    Then ecommerce "getOrderResponse" response status code should be 200
+    And ecommerce "getOrderResponse" response body should contain "message" as "ecomm.get.order.response.msg"
 
   # =====================================================================
   # DELETE ORDER
@@ -103,12 +103,12 @@ Feature: E-Commerce API - CRUD Operations
     And I store the "productId" from the "addProductResponse" response
     Given I have a valid create order request payload
     When I send a "POST" request to endpoint with "CreateOrderAPI"
-    Then the "createOrderResponse" response status code should be 201
+    Then ecommerce "createOrderResponse" response status code should be 201
     And I store the "orders[0]" from the "createOrderResponse" response
     Given I have a valid delete order request payload
     When I send a "DELETE" request to endpoint with "DeleteOrderAPI"
-    Then the "deleteOrderResponse" response status code should be 200
-    And the "deleteOrderResponse" response body should contain "message" as "ecomm.delete.order.response.msg"
+    Then ecommerce "deleteOrderResponse" response status code should be 200
+    And ecommerce "deleteOrderResponse" response body should contain "message" as "ecomm.delete.order.response.msg"
 
   # =====================================================================
   # DELETE PRODUCT
@@ -120,5 +120,5 @@ Feature: E-Commerce API - CRUD Operations
     And I store the "productId" from the "addProductResponse" response
     Given I have a valid delete product request payload
     When I send a "DELETE" request to endpoint with "DeleteProductAPI"
-    Then the "deleteProductResponse" response status code should be 200
-    And the "deleteProductResponse" response body should contain "message" as "ecomm.delete.product.resposne.msg"
+    Then ecommerce "deleteProductResponse" response status code should be 200
+    And ecommerce "deleteProductResponse" response body should contain "message" as "ecomm.delete.product.resposne.msg"

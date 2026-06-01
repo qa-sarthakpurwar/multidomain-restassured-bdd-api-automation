@@ -92,7 +92,6 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>7.34.3</version>
-			<scope>compile</scope>
 		</dependency>
 
 
@@ -102,7 +101,6 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>7.34.3</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!-- Source:
@@ -111,7 +109,6 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.21.3</version>
-			<scope>compile</scope>
 		</dependency>
 
 		<!-- Source:
@@ -120,7 +117,6 @@
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy</artifactId>
 			<version>3.0.25</version>
-			<scope>compile</scope>
 		</dependency>
 
 

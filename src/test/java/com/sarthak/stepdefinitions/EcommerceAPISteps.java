@@ -62,20 +62,20 @@ public class EcommerceAPISteps extends Utils {
 		responseMap.put(getResponseKey(resource), response);
 	}
 
-	@Then("the {string} response status code should be {int}")
-	public void the_response_status_code_should_be(String responseType, Integer code) {
+	@Then("ecommerce {string} response status code should be {int}")
+	public void ecommerce_response_status_code_should_be(String responseType, Integer code) {
 		Assert.assertEquals(code.intValue(), responseMap.get(responseType).getStatusCode());
 	}
 
-	@Then("the {string} response body should contain a valid {string}")
-	public void the_response_body_should_contain_a_valid(String responseType, String value) {
+	@Then("ecommerce {string} response body should contain a valid {string}")
+	public void ecommerce_response_body_should_contain_a_valid(String responseType, String value) {
 
 		String actualValue = getParsedJSONString(responseMap.get(responseType).asString(), value);
 		Assert.assertNotNull(value + " should not be null", actualValue);
 	}
 
-	@Then("the {string} response body should contain {string} as {string}")
-	public void the_response_body_should_contain_as(String responseType, String key, String value) {
+	@Then("ecommerce {string} response body should contain {string} as {string}")
+	public void ecommerce_response_body_should_contain_as(String responseType, String key, String value) {
 
 		String actualValue = getParsedJSONString(responseMap.get(responseType).asString(), key);
 		Assert.assertEquals("Mismatch on field: " + key, getProperty(value), actualValue);
