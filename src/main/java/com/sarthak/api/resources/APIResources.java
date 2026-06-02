@@ -14,7 +14,11 @@ public enum APIResources {
 	CreateOrderAPI("/api/ecom/order/create-order"),
 	GetOrderAPI("/api/ecom/order/get-orders-details"),
 	DeleteOrderAPI("/api/ecom/order/delete-order/{orderId}"),
-	DeleteProductAPI("/api/ecom/product/delete-product/{productId}");
+	DeleteProductAPI("/api/ecom/product/delete-product/{productId}"),
+	
+	GetAccessToken("/oauth2/v4/token"),
+	GetCourse("/getCourse.php");
+	
 
 	private String resource;
 

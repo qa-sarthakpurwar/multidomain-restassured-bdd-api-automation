@@ -71,6 +71,7 @@
 
 
 	<dependencies>
+
 		<!-- Source:
 		https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
@@ -94,6 +95,12 @@
 			<version>7.34.3</version>
 		</dependency>
 
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>7.34.3</version> <!-- IMPORTANT: match your cucumber version -->
+		</dependency>
 
 		<!-- Source:
 		https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
