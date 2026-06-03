@@ -11,7 +11,7 @@ Background:
 Given I have the Authorization Server URL
 And I have already obtained the authorization code
 
-@OAuth2 @GetAccessToken @Regression
+@OAuthCourse @GetAccessToken @Regression
 Scenario: Generate access token and fetch course details successfully
 # Generate Access Token
 Given I have a valid request payload for access token generation  

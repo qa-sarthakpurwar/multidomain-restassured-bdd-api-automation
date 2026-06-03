@@ -1,4 +1,4 @@
-com\sarthak\hooks\Hooks.class
 com\sarthak\runner\TestRunner.class
 com\sarthak\stepdefinitions\EcommerceAPISteps.class
 com\sarthak\stepdefinitions\PlaceAPISteps.class
+com\sarthak\hooks\Hooks.class

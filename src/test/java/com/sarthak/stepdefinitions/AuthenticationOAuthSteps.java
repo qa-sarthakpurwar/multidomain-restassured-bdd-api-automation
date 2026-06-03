@@ -4,9 +4,8 @@ import static io.restassured.RestAssured.given;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.junit.Assert.assertTrue;
-
+import org.junit.Assert;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,14 +14,12 @@ import com.sarthak.api.resources.APIResources;
 import com.sarthak.api.utils.TestContext;
 import com.sarthak.api.utils.Utils;
 import com.sarthak.oauth.pojo.GetCoursesDetails;
-import com.sarthak.oauth.pojo.TestData;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import junit.framework.Assert;
 
 public class AuthenticationOAuthSteps {
 
