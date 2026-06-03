@@ -21,7 +21,7 @@ public class Hooks {
 		stepDefinition.i_store_the_from_the_response("userId", "loginResponse");
 	}
 
-	@After("@ECommerce and not @DeleteProduct")
+	@After("@ECommerce and not @DeleteProduct and not @Login")
 	public void runCleanupScenario(Scenario scenario) throws FileNotFoundException {
 
 		System.out.println("Running cleanup after: " + scenario.getName());
