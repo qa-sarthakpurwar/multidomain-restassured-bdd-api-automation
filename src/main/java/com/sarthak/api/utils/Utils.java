@@ -54,7 +54,7 @@ public class Utils {
 	public static RequestSpecification getPlaceRequestSpec() throws FileNotFoundException {
 		if (requestSpec == null) {
 
-			PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
+			PrintStream log = new PrintStream(new FileOutputStream("logging.txt", true));
 
 			requestSpec = new RequestSpecBuilder().setBaseUri(getProperty("base.url"))
 					.addQueryParam("key", getProperty("api.key")).addFilter(RequestLoggingFilter.logRequestTo(log))
@@ -99,7 +99,7 @@ public class Utils {
 			requestSpec =  new RequestSpecBuilder()
 	                .setBaseUri(getProperty("base.url"))
 	                .addHeader("Authorization", getProperty("token"))
-	                .addFilter(new RequestLoggingFilter(LogDetail.ALL, true, log))
+	                //.addFilter(new RequestLoggingFilter(LogDetail.ALL, true, log))
 	                .addFilter(new ResponseLoggingFilter(LogDetail.ALL, true, log))
 	                .build();
 			return requestSpec;

@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src\\test\\resources\\features", plugin = { "json:target/jsonReports/cucumber-report.json",
 				 "com.sarthak.listeners.StepLogger" },
 
-		glue = { "com.sarthak.stepdefinitions", "com.sarthak.hooks" }, tags = "@Regression",
+		glue = { "com.sarthak.stepdefinitions", "com.sarthak.hooks" }, tags = "@ECommerce",
 
 		// ── Report ─────────────────────────────────────────────────
 
