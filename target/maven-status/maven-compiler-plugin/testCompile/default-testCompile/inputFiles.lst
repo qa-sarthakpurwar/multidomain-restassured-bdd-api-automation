@@ -1,4 +1,5 @@
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\hooks\Hooks.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\listeners\StepLogger.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\runner\TestRunner.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\stepdefinitions\AuthenticationOAuthSteps.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\stepdefinitions\EcommerceAPISteps.java
