@@ -1,5 +1,6 @@
 package com.sarthak.api.utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -8,6 +9,9 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sarthak.oauth.pojo.TestData;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -105,6 +109,26 @@ public class Utils {
 		return requestSpec;
 }
 	
+	
+	// ── Read Json File───────────────────
+	
+	 public static TestData testData;
+
+	    static {
+	        try {
+	            ObjectMapper mapper = new ObjectMapper();
+	            testData = mapper.readValue(
+	                new File("src\\test\\resources\\TestData\\OAuthCourse.json"),
+	                TestData.class
+	            );
+	        } catch (Exception e) {
+	            throw new RuntimeException(e);
+	        }
+	    }
+
+	    public static TestData getTestData() {
+	        return testData;
+	    }
 	
 	
 	protected static List<String> getProductData() {

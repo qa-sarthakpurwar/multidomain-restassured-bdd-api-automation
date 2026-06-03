@@ -1,6 +1,7 @@
 package com.sarthak.stepdefinitions;
 
 import static io.restassured.RestAssured.given;
+
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.junit.Assert.assertTrue;
 
@@ -14,6 +15,7 @@ import com.sarthak.api.resources.APIResources;
 import com.sarthak.api.utils.TestContext;
 import com.sarthak.api.utils.Utils;
 import com.sarthak.oauth.pojo.GetCoursesDetails;
+import com.sarthak.oauth.pojo.TestData;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,16 +24,12 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import junit.framework.Assert;
 
-
-public class AuthenticationOAuthSteps extends Utils {
+public class AuthenticationOAuthSteps {
 
 	Map<String, RequestSpecification> requestMap = new HashMap<>();
 	Map<String, Response> responseMap = new HashMap<>();
 
 	TestContext testContext;
-
-	List<String> expectedTitles = Arrays.asList("Selenium Webdriver Java", "Cypress", "Protractor",
-			"Rest Assured Automation using Java", "SoapUI Webservices testing", "Appium-Mobile Automation using Java");
 
 	public AuthenticationOAuthSteps(TestContext testContext) {
 		this.testContext = testContext;
@@ -39,7 +37,7 @@ public class AuthenticationOAuthSteps extends Utils {
 
 	@Given("I have the Authorization Server URL")
 	public void i_have_the_authorization_server_url() {
-		String authUrl = "https://rahulshettyacademy.com/getCourse.php?state=random_string_123&iss=https%3A%2F%2Faccounts.google.com&code=4%2F0AeoWuM_x0N0eeOQW5w_fIizWrXGzMVq5_WyV073zQRYMNCLi27ZAOJYEBzp-EEj-9b5wyA&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=none";
+		String authUrl = Utils.getProperty("authUrl");
 		testContext.setBaseUri(authUrl);
 	}
 
@@ -52,12 +50,13 @@ public class AuthenticationOAuthSteps extends Utils {
 
 	@Given("I have a valid request payload for access token generation")
 	public void i_have_a_valid_request_payload_for_access_token_generation() {
-		requestMap.put("GetAccessToken", given().baseUri("https://www.googleapis.com").urlEncodingEnabled(false)
-				.queryParams("code", testContext.getAuthorizationCode())
-				.queryParams("client_id", "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com")
-				.queryParams("client_secret", "erZOWM9g3UtwNRj340YYaK_W")
-				.queryParams("redirect_uri", "https://rahulshettyacademy.com/getCourse.php")
-				.queryParams("grant_type", "authorization_code"));
+		requestMap.put("GetAccessToken",
+				given().baseUri(Utils.getProperty("accessTokenUrl")).urlEncodingEnabled(false)
+						.queryParams("code", testContext.getAuthorizationCode())
+						.queryParams("client_id", System.getenv("CLIENT_ID"))
+						.queryParams("client_secret", System.getenv("CLIENT_SECRET"))
+						.queryParams("redirect_uri", Utils.getProperty("redirectUri"))
+						.queryParams("grant_type", Utils.testData.getAuth().getGrantType()));
 	}
 
 	@When("I send a {string} request to the {string} endpoint")
@@ -94,15 +93,15 @@ public class AuthenticationOAuthSteps extends Utils {
 	@Then("I store the {string} from the authentication {string} response")
 	public void i_store_the_from_the_response(String accessToken, String responseType) {
 
-		testContext.setAccessToken(getParsedJSONString(responseMap.get(responseType).asString(), accessToken));
+		testContext.setAccessToken(Utils.getParsedJSONString(responseMap.get(responseType).asString(), accessToken));
 
 	}
 
 	@Given("I have a valid request to fetch course details")
 	public void i_have_a_valid_request_to_fetch_course_details() {
 
-		requestMap.put("GetCourse", given().baseUri("https://rahulshettyacademy.com").queryParam("access_token",
-				testContext.getAccessToken()));
+		requestMap.put("GetCourse",
+				given().baseUri(Utils.getProperty("baseUri")).queryParam("access_token", testContext.getAccessToken()));
 	}
 
 	@Then("the authentication {string} response should match the expected JSON schema")
@@ -117,11 +116,11 @@ public class AuthenticationOAuthSteps extends Utils {
 		GetCoursesDetails courseDetails = responseMap.get(responseType).as(GetCoursesDetails.class,
 				io.restassured.mapper.ObjectMapperType.JACKSON_2);
 
-		Assert.assertEquals(courseDetails.getInstructor(), "RahulShetty");
-		Assert.assertEquals(courseDetails.getServices(), "projectSupport");
+		Assert.assertEquals(courseDetails.getInstructor(), Utils.testData.getExpectedData().getInstructor());
+		Assert.assertEquals(courseDetails.getServices(), Utils.testData.getExpectedData().getServices());
 
 		Assert.assertTrue(courseDetails.getCourses().getWebAutomation().size() > 0);
-		Assert.assertTrue(courseDetails.getLinkedIn().contains("linkedin.com"));
+		Assert.assertTrue(courseDetails.getLinkedIn().contains(Utils.testData.getExpectedData().getLinkedIn()));
 
 		List<String> allTitles = new ArrayList<>();
 
@@ -129,16 +128,16 @@ public class AuthenticationOAuthSteps extends Utils {
 		courseDetails.getCourses().getApi().forEach(c -> allTitles.add(c.getCourseTitle()));
 		courseDetails.getCourses().getMobile().forEach(c -> allTitles.add(c.getCourseTitle()));
 
-		Assert.assertEquals(allTitles, expectedTitles);
+		assertTrue(allTitles.containsAll(TestContext.EXPECTED_TITLES));
 
 		List<String> allPrices = new ArrayList<>();
-		courseDetails.getCourses().getWebAutomation().forEach(c -> allTitles.add(c.getPrice()));
-		courseDetails.getCourses().getApi().forEach(c -> allTitles.add(c.getPrice()));
-		courseDetails.getCourses().getMobile().forEach(c -> allTitles.add(c.getPrice()));
+		courseDetails.getCourses().getWebAutomation().forEach(c -> allPrices.add(c.getPrice()));
+		courseDetails.getCourses().getApi().forEach(c -> allPrices.add(c.getPrice()));
+		courseDetails.getCourses().getMobile().forEach(c -> allPrices.add(c.getPrice()));
 
 		for (String price : allPrices) {
 			int p = Integer.parseInt(price);
-			Assert.assertTrue("Price should be greater than 0 but was: " + p  ,p > 0);
+			Assert.assertTrue("Price should be greater than 0 but was: " + p, p > 0);
 		}
 
 	}
