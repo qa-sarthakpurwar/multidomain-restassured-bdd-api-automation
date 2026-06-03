@@ -1,0 +1,68 @@
+{
+"$schema": "http://json-schema.org/draft-07/schema#",
+"type": "object",
+"required": [
+"instructor",
+"url",
+"services",
+"expertise",
+"courses",
+"linkedIn"
+],
+"properties": {
+"instructor": {
+"type": "string"
+},
+"url": {
+"type": "string"
+},
+"services": {
+"type": "string"
+},
+"expertise": {
+"type": "string"
+},
+"linkedIn": {
+"type": "string",
+"format": "uri"
+},
+"courses": {
+"type": "object",
+"required": ["webAutomation", "api", "mobile"],
+"properties": {
+"webAutomation": {
+"type": "array",
+"items": {
+"$ref": "#/definitions/course"
+}
+},
+"api": {
+"type": "array",
+"items": {
+"$ref": "#/definitions/course"
+}
+},
+"mobile": {
+"type": "array",
+"items": {
+"$ref": "#/definitions/course"
+}
+}
+}
+}
+},
+"definitions": {
+"course": {
+"type": "object",
+"required": ["courseTitle", "price"],
+"properties": {
+"courseTitle": {
+"type": "string"
+},
+"price": {
+"type": "string"
+}
+}
+}
+}
+}
