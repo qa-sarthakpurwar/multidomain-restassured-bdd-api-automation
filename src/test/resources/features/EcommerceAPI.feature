@@ -43,6 +43,7 @@ Feature: E-Commerce API - CRUD Operations
     When I send a "GET" request to endpoint with "GetProductDetailAPI"
     Then ecommerce "getProductDetailResponse" response status code should be 200
     And ecommerce "getProductDetailResponse" response body should contain "message" as "ecomm.getProductDetail.response.msg"
+    And ecommerce "getProductDetailResponse" response body should contains valid product Details
 # =====================================================================
 # ADD PRODUCT  TO CART
 # =====================================================================

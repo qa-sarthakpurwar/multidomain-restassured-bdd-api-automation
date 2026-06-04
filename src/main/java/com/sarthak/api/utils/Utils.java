@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Properties;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sarthak.ecommapi.pojo.ProductData;
 import com.sarthak.oauth.pojo.TestData;
 
 import io.restassured.builder.RequestSpecBuilder;
@@ -129,9 +130,28 @@ public class Utils {
 	    public static TestData getTestData() {
 	        return testData;
 	    }
+	    
+	    
+	    public static ProductData productData;
+
+	    static {
+	        try {
+	            ObjectMapper mapper = new ObjectMapper();
+	            productData = mapper.readValue(
+	                new File("src\\test\\resources\\TestData\\ProductDetails.json"),
+	                ProductData.class
+	            );
+	        } catch (Exception e) {
+	            throw new RuntimeException(e);
+	        }
+	    }
+
+	    public static ProductData getProductData() {
+	        return productData;
+	    }
 	
 	
-	protected static List<String> getProductData() {
+	protected static List<String> getProductDataList() {
 	    List<String> data = new ArrayList<>();
 	    data.add(getProperty("productId"));
 	    data.add(getProperty("productName"));

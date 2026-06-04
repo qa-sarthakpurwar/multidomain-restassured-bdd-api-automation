@@ -1,5 +1,5 @@
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:45 GMT
+Date: Thu, 04 Jun 2026 07:05:02 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -14,18 +14,18 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 367
-ETag: W/"16f-6bvR0SCBxqw789AfIgUIEC4mEp8"
+ETag: W/"16f-33LvjWZMtfTAxUqejxXS94bv4MA"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODA1MTQwMjUsImV4cCI6MTgxMjA3MTYyNX0.zsqHOT6ItuY_xBP8ET8oqBw-f-7H4fo1f0oiVz8O1Bo",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODA1NTY3MDIsImV4cCI6MTgxMjExNDMwMn0.UN-Gh7u0GcBQh5qvpvWpDVCb4S6S9uJsmZEBepu44Ig",
     "userId": "63e1d725568c3e9fb10e43ac",
     "message": "Login Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:47 GMT
+Date: Thu, 04 Jun 2026 07:05:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -40,17 +40,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-8e1Ny0Z/OO9N+L5c7w20e1u7aDE"
+ETag: W/"4f-7m19b37JXptphVHbJaG/Ftcu6Bs"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a207ceb17ee3e78bab7e106",
+    "productId": "6a21239f17ee3e78bab98e6f",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:48 GMT
+Date: Thu, 04 Jun 2026 07:05:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -74,7 +74,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:48 GMT
+Date: Thu, 04 Jun 2026 07:05:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -89,17 +89,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-qqP9Tq/I41dsKHQrCXfVAP2CLSs"
+ETag: W/"4f-m4Fv1iOTxvvOVkRmATtV0pjfdNM"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a207cec17ee3e78bab7e113",
+    "productId": "6a21239f17ee3e78bab98e74",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:48 GMT
+Date: Thu, 04 Jun 2026 07:05:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -114,20 +114,20 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 478
-ETag: W/"1de-W5hkmknMkwoYTcPVi7GHxXMaM08"
+ETag: W/"1de-VZbkTltMV625llN26zqbI3W9otg"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
-        "_id": "6a207cec17ee3e78bab7e113",
+        "_id": "6a21239f17ee3e78bab98e74",
         "productName": "Rolex Daytona 7A",
         "productCategory": "lifestyle",
         "productSubCategory": "watch",
         "productPrice": 999999,
         "productDescription": "Rolex Originals",
-        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780514028690.jpg",
+        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780556703434.jpg",
         "productRating": "0",
         "productTotalOrders": "0",
         "productStatus": true,
@@ -138,7 +138,7 @@ Connection: Keep-Alive
     "message": "Product Details fetched Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:48 GMT
+Date: Thu, 04 Jun 2026 07:05:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -162,7 +162,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:49 GMT
+Date: Thu, 04 Jun 2026 07:05:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -177,17 +177,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-cJdncf3H138OF7QDcHzsR0nfSr8"
+ETag: W/"4f-GAumfUltUv+jT0KqCNfPuJHizJ8"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a207ced17ee3e78bab7e11d",
+    "productId": "6a21239f17ee3e78bab98e7e",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:49 GMT
+Date: Thu, 04 Jun 2026 07:05:03 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -202,20 +202,20 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 478
-ETag: W/"1de-SRMOfM9PZc+W6Tr5LXIiojdkDz4"
+ETag: W/"1de-gjB/Tnap344BdPcFjXSa1AMqEu0"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
-        "_id": "6a207ced17ee3e78bab7e11d",
+        "_id": "6a21239f17ee3e78bab98e7e",
         "productName": "Rolex Daytona 7A",
         "productCategory": "lifestyle",
         "productSubCategory": "watch",
         "productPrice": 999999,
         "productDescription": "Rolex Originals",
-        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780514029105.jpg",
+        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780556703845.jpg",
         "productRating": "0",
         "productTotalOrders": "0",
         "productStatus": true,
@@ -226,7 +226,7 @@ Connection: Keep-Alive
     "message": "Product Details fetched Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:49 GMT
+Date: Thu, 04 Jun 2026 07:05:04 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -250,7 +250,7 @@ Connection: Keep-Alive
     "message": "Product Added To Cart"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:49 GMT
+Date: Thu, 04 Jun 2026 07:05:04 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -274,7 +274,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:50 GMT
+Date: Thu, 04 Jun 2026 07:05:04 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -289,17 +289,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-ltO5AItM/HQ9ybbV/Kqe7NLZQ+c"
+ETag: W/"4f-TFVyFcURqgEl9n3NlePg4vm+nyY"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a207cee17ee3e78bab7e128",
+    "productId": "6a2123a017ee3e78bab98e8a",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:50 GMT
+Date: Thu, 04 Jun 2026 07:05:04 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -314,22 +314,22 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 123
-ETag: W/"7b-boAWzcAQh9X9XuIjCepUqOc/kbs"
+ETag: W/"7b-9vYtwLE8UCxbzijN9JRorYevUYE"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "orders": [
-        "6a207cee17ee3e78bab7e12f"
+        "6a2123a017ee3e78bab98e8e"
     ],
     "productOrderId": [
-        "6a207cee17ee3e78bab7e128"
+        "6a2123a017ee3e78bab98e8a"
     ],
     "message": "Order Placed Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:50 GMT
+Date: Thu, 04 Jun 2026 07:05:04 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -353,7 +353,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:50 GMT
+Date: Thu, 04 Jun 2026 07:05:04 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -368,17 +368,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-lADUknLW8kbJRFkmWZydXk+IK2Q"
+ETag: W/"4f-o2ikHxJTlGTcOXsjsbw2NBt4K8k"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a207cee17ee3e78bab7e138",
+    "productId": "6a2123a017ee3e78bab98e94",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:50 GMT
+Date: Thu, 04 Jun 2026 07:05:04 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -393,22 +393,22 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 123
-ETag: W/"7b-YMN+ZfzJ1//7ZrA88fXpDWSu5jg"
+ETag: W/"7b-kzscHbUUIlBeP9B7eqUOOohF4LU"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "orders": [
-        "6a207cee17ee3e78bab7e13e"
+        "6a2123a017ee3e78bab98e9a"
     ],
     "productOrderId": [
-        "6a207cee17ee3e78bab7e138"
+        "6a2123a017ee3e78bab98e94"
     ],
     "message": "Order Placed Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:50 GMT
+Date: Thu, 04 Jun 2026 07:05:05 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -423,28 +423,28 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 436
-ETag: W/"1b4-vNk+RB5r6Ni33qTBVffD4Zu0wuY"
+ETag: W/"1b4-Jy25ytwxDak/c/puzmBh+3KmljI"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
-        "_id": "6a207cee17ee3e78bab7e13e",
+        "_id": "6a2123a017ee3e78bab98e9a",
         "orderById": "63e1d725568c3e9fb10e43ac",
         "orderBy": "signaturemusic12@gmail.com",
-        "productOrderedId": "6a207cee17ee3e78bab7e138",
+        "productOrderedId": "6a2123a017ee3e78bab98e94",
         "productName": "Rolex Daytona 7A",
         "country": "India",
         "productDescription": "Rolex Originals",
-        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780514030556.jpg",
+        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780556704781.jpg",
         "orderPrice": "999999",
         "__v": 0
     },
     "message": "Orders fetched for customer Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:50 GMT
+Date: Thu, 04 Jun 2026 07:05:05 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -468,7 +468,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:51 GMT
+Date: Thu, 04 Jun 2026 07:05:05 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -483,17 +483,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-eyvY4KhxKzbLjy62E5VtpOELWns"
+ETag: W/"4f-wSyqjv/oVNXFGLsSGzfA+CQ6t/E"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a207cef17ee3e78bab7e145",
+    "productId": "6a2123a117ee3e78bab98ea1",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:51 GMT
+Date: Thu, 04 Jun 2026 07:05:05 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -508,22 +508,22 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 123
-ETag: W/"7b-O3NiAZ6GiN02SPGZMf7V3VBynG4"
+ETag: W/"7b-mwAcBRYZDiYXwxs5rFsa60m3YPA"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "orders": [
-        "6a207cef17ee3e78bab7e14b"
+        "6a2123a117ee3e78bab98ea7"
     ],
     "productOrderId": [
-        "6a207cef17ee3e78bab7e145"
+        "6a2123a117ee3e78bab98ea1"
     ],
     "message": "Order Placed Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:51 GMT
+Date: Thu, 04 Jun 2026 07:05:05 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -547,7 +547,7 @@ Connection: Keep-Alive
     "message": "Orders Deleted Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:51 GMT
+Date: Thu, 04 Jun 2026 07:05:05 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -571,7 +571,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Wed, 03 Jun 2026 19:13:51 GMT
+Date: Thu, 04 Jun 2026 07:05:05 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -586,17 +586,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-KkvpYx16R8Fzj1KE2hgxIfM0Q8s"
+ETag: W/"4f-rnPvbWKXAEzA8dvicTdmDHytVb8"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a207cef17ee3e78bab7e153",
+    "productId": "6a2123a117ee3e78bab98eaf",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 200 OK
-Date: Wed, 03 Jun 2026 19:13:51 GMT
+Date: Thu, 04 Jun 2026 07:05:05 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
