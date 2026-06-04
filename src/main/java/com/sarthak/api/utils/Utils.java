@@ -151,7 +151,7 @@ public class Utils {
 	    }
 	
 	
-	protected static List<String> getProductDataList() {
+	public static List<String> getProductDataList() {
 	    List<String> data = new ArrayList<>();
 	    data.add(getProperty("productId"));
 	    data.add(getProperty("productName"));

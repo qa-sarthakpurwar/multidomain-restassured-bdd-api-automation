@@ -1,7 +1,5 @@
 package com.sarthak.stepdefinitions;
 
-import static io.restassured.RestAssured.given;
-
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.List;
@@ -10,6 +8,7 @@ import java.util.Map;
 import org.junit.Assert;
 
 import com.sarthak.api.resources.APIResources;
+import com.sarthak.api.utils.TestContext;
 import com.sarthak.api.utils.Utils;
 import com.sarthak.ecommapi.pojo.EcommPojoUtilities;
 import com.sarthak.ecommapi.pojo.ProductResponse;
@@ -24,10 +23,13 @@ import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class EcommerceAPISteps extends Utils {
+public class EcommerceAPISteps {
 
-	Map<String, Response> responseMap = new HashMap<>();
-	Map<String, RequestSpecification> requestMap = new HashMap<>();
+	private TestContext context;
+
+	public EcommerceAPISteps(TestContext context) {
+		this.context = context;
+	}
 
 	EcommPojoUtilities pojoPayloads = new EcommPojoUtilities();
 	AuthService authService = new AuthService();
@@ -37,7 +39,8 @@ public class EcommerceAPISteps extends Utils {
 
 	@Given("I have a valid login request payload")
 	public void i_have_a_valid_login_request_payload() throws FileNotFoundException {
-		requestMap.put("LoginAPI", authService.login());
+
+		context.getRequestMap().put("LoginAPI", authService.login());
 
 	}
 
@@ -45,7 +48,7 @@ public class EcommerceAPISteps extends Utils {
 	public void i_send_a_request_to_endpoint_with(String httpMethod, String resource) {
 		APIResources resourceAPI = APIResources.valueOf(resource);
 
-		RequestSpecification request = requestMap.get(resource);
+		RequestSpecification request = context.getRequestMap().get(resource);
 		Response response;
 
 		switch (httpMethod.toUpperCase()) {
@@ -64,33 +67,33 @@ public class EcommerceAPISteps extends Utils {
 		default:
 			throw new IllegalArgumentException("Unsupported HTTP method: " + httpMethod);
 		}
-		responseMap.put(getResponseKey(resource), response);
+		context.getResponseMap().put(getResponseKey(resource), response);
 	}
 
 	@Then("ecommerce {string} response status code should be {int}")
 	public void ecommerce_response_status_code_should_be(String responseType, Integer code) {
-		Assert.assertEquals(code.intValue(), responseMap.get(responseType).getStatusCode());
+		Assert.assertEquals(code.intValue(), context.getResponseMap().get(responseType).getStatusCode());
 	}
 
 	@Then("ecommerce {string} response body should contain a valid {string}")
 	public void ecommerce_response_body_should_contain_a_valid(String responseType, String value) {
 
-		String actualValue = getParsedJSONString(responseMap.get(responseType).asString(), value);
+		String actualValue = Utils.getParsedJSONString(context.getResponseMap().get(responseType).asString(), value);
 		Assert.assertNotNull(value + " should not be null", actualValue);
 	}
 
 	@Then("ecommerce {string} response body should contain {string} as {string}")
 	public void ecommerce_response_body_should_contain_as(String responseType, String key, String value) {
 
-		String actualValue = getParsedJSONString(responseMap.get(responseType).asString(), key);
-		Assert.assertEquals("Mismatch on field: " + key, getProperty(value), actualValue);
+		String actualValue = Utils.getParsedJSONString(context.getResponseMap().get(responseType).asString(), key);
+		Assert.assertEquals("Mismatch on field: " + key, Utils.getProperty(value), actualValue);
 	}
 
 	@Then("ecommerce {string} response body should contains valid product Details")
 	public void ecommerce_response_body_should_contains_valid_product_Details(String responseType) {
 
-		ProductResponse productResponse = responseMap.get(responseType).as(ProductResponse.class);
-		Assert.assertEquals(productResponse.getData().getProductAddedBy(), getProperty("userId"));
+		ProductResponse productResponse = context.getResponseMap().get(responseType).as(ProductResponse.class);
+		Assert.assertEquals(productResponse.getData().getProductAddedBy(), Utils.getProperty("userId"));
 		Assert.assertEquals(productResponse.getData().getProductCategory(), Utils.productData.getProductCategory());
 		Assert.assertEquals(productResponse.getData().getProductDescription(),
 				Utils.productData.getProductDescription());
@@ -102,55 +105,56 @@ public class EcommerceAPISteps extends Utils {
 
 	@When("I store the {string} from the {string} response")
 	public void i_store_the_from_the_response(String key, String responseType) {
-		setProperty(key, getParsedJSONString(responseMap.get(responseType).asString(), key));
+		Utils.setProperty(key, Utils.getParsedJSONString(context.getResponseMap().get(responseType).asString(), key));
 	}
 
 	@Given("I have a valid add product request payload")
 	public void i_have_a_valid_add_product_request_payload() throws FileNotFoundException {
 
-		requestMap.put("AddProductAPI", productService.addProduct());
+		context.getRequestMap().put("AddProductAPI", productService.addProduct());
 	}
 
 	@Given("I have a valid get product detail request payload")
 	public void i_have_a_valid_get_product_detail_request_payload() throws FileNotFoundException {
 
-		requestMap.put("GetProductDetailAPI", productService.getProduct(getProperty("productId")));
+		context.getRequestMap().put("GetProductDetailAPI", productService.getProduct(Utils.getProperty("productId")));
 
 	}
 
 	@Given("I have a valid add to cart request payload")
 	public void i_have_a_valid_add_to_cart_request_payload() throws FileNotFoundException {
 
-		List<String> data = getProductDataList();
-		requestMap.put("AddToCartAPI", cartService.addToCart(data));
+		List<String> data = Utils.getProductDataList();
+		context.getRequestMap().put("AddToCartAPI", cartService.addToCart(data));
 
 	}
 
 	@Given("I have a valid create order request payload")
 	public void i_have_a_valid_create_order_request_payload() throws FileNotFoundException {
 
-		requestMap.put("CreateOrderAPI", orderService.createOrder(getProperty("country"), getProperty("productId")));
+		context.getRequestMap().put("CreateOrderAPI",
+				orderService.createOrder(Utils.getProperty("country"), Utils.getProperty("productId")));
 
 	}
 
 	@Given("I have a valid get order request")
 	public void i_have_a_valid_get_order_request() throws FileNotFoundException {
 
-		requestMap.put("GetOrderAPI", orderService.getOrder(getProperty("orders[0]")));
+		context.getRequestMap().put("GetOrderAPI", orderService.getOrder(Utils.getProperty("orders[0]")));
 
 	}
 
 	@Given("I have a valid delete order request payload")
 	public void i_have_a_valid_delete_order_request_payload() throws FileNotFoundException {
 
-		requestMap.put("DeleteOrderAPI", orderService.deleteOrder(getProperty("orders[0]")));
+		context.getRequestMap().put("DeleteOrderAPI", orderService.deleteOrder(Utils.getProperty("orders[0]")));
 
 	}
 
 	@Given("I have a valid delete product request payload")
 	public void i_have_a_valid_delete_product_request_payload() throws FileNotFoundException {
 
-		requestMap.put("DeleteProductAPI", productService.deleteProduct(getProperty("productId")));
+		context.getRequestMap().put("DeleteProductAPI", productService.deleteProduct(Utils.getProperty("productId")));
 
 	}
 
