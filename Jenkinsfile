@@ -11,7 +11,8 @@ pipeline {
             steps {
                 script {
 
-                    deleteDir() 
+                    deleteDir()
+
                     def tags = params.RUN.split(",")
                     def jobs = [:]
 
@@ -24,14 +25,11 @@ pipeline {
 
                             dir("run-${cleanTag}") {
 
-                                // Fresh checkout for each parallel run
                                 checkout scm
 
                                 echo "Running for tag: ${tag}"
 
                                 bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag}"
-                                	
-
                             }
                         }
                     }
@@ -40,14 +38,15 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Debug Reports') {
-    steps {
-        script {
-            bat "dir /s target"
+            steps {
+                script {
+                    // Check ALL parallel folders
+                    bat "dir /s run-*"
+                }
+            }
         }
-    }
-}
 
         stage('Parse Reports') {
             steps {
@@ -104,7 +103,6 @@ pipeline {
     post {
         always {
 
-            // Archive ALL reports from all runs
             archiveArtifacts artifacts: '**/target/**/*.*', allowEmptyArchive: true
 
             emailext(
@@ -118,17 +116,18 @@ pipeline {
                 <h2>🚀 Parallel Execution Summary</h2>
 
                 <table border="1" cellpadding="8" cellspacing="0">
-                    <tr>
-                        <th>Total</th>
-                        <th>Passed</th>
-                        <th>Failed</th>
-                        <th>Skipped</th>
+                    <tr bgcolor="#2c3e50">
+                        <th><font color="white">Total</font></th>
+                        <th><font color="white">Passed</font></th>
+                        <th><font color="white">Failed</font></th>
+                        <th><font color="white">Skipped</font></th>
                     </tr>
+
                     <tr>
-                        <td>${env.TOTAL ?: '0'}</td>
-                        <td>${env.PASSED ?: '0'}</td>
-                        <td>${env.FAILED ?: '0'}</td>
-                        <td>${env.SKIPPED ?: '0'}</td>
+                        <td><b>${env.TOTAL ?: '0'}</b></td>
+                        <td><font color="green"><b>${env.PASSED ?: '0'}</b></font></td>
+                        <td><font color="red"><b>${env.FAILED ?: '0'}</b></font></td>
+                        <td><font color="orange"><b>${env.SKIPPED ?: '0'}</b></font></td>
                     </tr>
                 </table>
 
@@ -141,6 +140,7 @@ pipeline {
                 """,
 
                 mimeType: 'text/html',
+
                 attachmentsPattern: '**/target/ExtentReport.html'
             )
         }
