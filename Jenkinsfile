@@ -11,6 +11,7 @@ pipeline {
             steps {
                 script {
 
+                    deleteDir() 
                     def tags = params.RUN.split(",")
                     def jobs = [:]
 
@@ -29,6 +30,7 @@ pipeline {
                                 echo "Running for tag: ${tag}"
 
                                 bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag}"
+                                	
 
                             }
                         }
