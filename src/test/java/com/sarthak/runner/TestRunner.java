@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 
 		features = "src\\test\\resources\\features", plugin = { "json:target/jsonReports/cucumber-report.json",
-				 "com.sarthak.listeners.StepLogger" },
+				"html:target/cucumber-report.html", "com.sarthak.listeners.StepLogger" },
 
 		glue = { "com.sarthak.stepdefinitions", "com.sarthak.hooks" }, tags = "@ECommerce",
 
