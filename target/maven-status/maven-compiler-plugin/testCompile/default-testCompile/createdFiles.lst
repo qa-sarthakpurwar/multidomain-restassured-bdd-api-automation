@@ -4,3 +4,7 @@ com\sarthak\stepdefinitions\EcommerceAPISteps.class
 com\sarthak\stepdefinitions\PlaceAPISteps.class
 com\sarthak\hooks\Hooks.class
 com\sarthak\listeners\StepLogger.class
+com\sarthak\services\OrderService.class
+com\sarthak\services\ProductService.class
+com\sarthak\services\CartService.class
+com\sarthak\services\AuthService.class

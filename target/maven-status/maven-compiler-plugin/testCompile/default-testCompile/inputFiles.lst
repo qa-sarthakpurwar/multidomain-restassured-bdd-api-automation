@@ -1,6 +1,10 @@
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\hooks\Hooks.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\listeners\StepLogger.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\runner\TestRunner.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\services\AuthService.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\services\CartService.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\services\OrderService.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\services\ProductService.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\stepdefinitions\AuthenticationOAuthSteps.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\stepdefinitions\EcommerceAPISteps.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\test\java\com\sarthak\stepdefinitions\PlaceAPISteps.java

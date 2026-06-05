@@ -1,3 +1,4 @@
+```groovy
 pipeline {
     agent any
 
@@ -13,26 +14,21 @@ pipeline {
             }
         }
 
-        stage('Run Tests in Parallel') {
+        stage('Run Tests') {
             steps {
                 script {
 
                     def tags = params.RUN.split(",")
-                    def jobs = [:]
 
                     for (int i = 0; i < tags.size(); i++) {
 
                         def tag = tags[i].trim()
                         def cleanTag = tag.replace('@','')
 
-                        jobs["Run ${tag}"] = {
-                            echo "Running for tag: ${tag}"
+                        echo "Running for tag: ${tag}"
 
-                            bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag} -Dcucumber.plugin=json:target/jsonReports/${cleanTag}.json"
-                        }
+                        bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag}"
                     }
-
-                    parallel jobs
                 }
             }
         }
@@ -41,44 +37,34 @@ pipeline {
             steps {
                 script {
 
-                    def tags = params.RUN.split(",")
+                    def filePath = "target/jsonReports/cucumber.json"
+
+                    echo "Looking for file: ${filePath}"
+
+                    if (!fileExists(filePath)) {
+                        error "Cucumber JSON report not found!"
+                    }
+
+                    def jsonText = readFile(filePath)
+                    def report = new groovy.json.JsonSlurper().parseText(jsonText)
 
                     int total = 0
                     int passed = 0
                     int failed = 0
                     int skipped = 0
 
-                    // DEBUG: list files
-                    bat "dir target\\jsonReports"
+                    report.each { feature ->
+                        feature.elements.each { scenario ->
+                            total++
 
-                    tags.each { tag ->
+                            def statuses = scenario.steps.collect { it?.result?.status }
 
-                        def cleanTag = tag.replace('@','')
-                        def filePath = "target/jsonReports/${cleanTag}.json"
-
-                        echo "Looking for file: ${filePath}"
-
-                        if (!fileExists(filePath)) {
-                            echo "WARNING: File not found -> ${filePath}"
-                            return
-                        }
-
-                        def jsonText = readFile(filePath)
-                        def report = new groovy.json.JsonSlurper().parseText(jsonText)
-
-                        report.each { feature ->
-                            feature.elements.each { scenario ->
-                                total++
-
-                                def statuses = scenario.steps.collect { it?.result?.status }
-
-                                if (statuses.contains("failed")) {
-                                    failed++
-                                } else if (statuses.contains("skipped")) {
-                                    skipped++
-                                } else {
-                                    passed++
-                                }
+                            if (statuses.contains("failed")) {
+                                failed++
+                            } else if (statuses.contains("skipped")) {
+                                skipped++
+                            } else {
+                                passed++
                             }
                         }
                     }
@@ -105,44 +91,35 @@ pipeline {
                 <html>
                 <body style="font-family:Arial;">
 
-                <h2 style="color:#2c3e50;">🚀 Automation Execution Summary</h2>
+                <h2>🚀 Automation Execution Summary</h2>
 
-                <hr>
-
-                <table border="1" cellpadding="8" cellspacing="0"
-                       style="border-collapse: collapse; width: 60%; text-align: center;">
-
-                    <tr style="background-color:#2c3e50; color:white;">
+                <table border="1" cellpadding="8" cellspacing="0" style="width:60%; text-align:center;">
+                    <tr>
                         <th>Total</th>
                         <th>Passed</th>
                         <th>Failed</th>
                         <th>Skipped</th>
                     </tr>
-
                     <tr>
-                        <td><b>${env.TOTAL ?: '0'}</b></td>
-                        <td style="color:#2ecc71;"><b>${env.PASSED ?: '0'}</b></td>
-                        <td style="color:#e74c3c;"><b>${env.FAILED ?: '0'}</b></td>
-                        <td style="color:#f1c40f;"><b>${env.SKIPPED ?: '0'}</b></td>
+                        <td>${env.TOTAL ?: '0'}</td>
+                        <td>${env.PASSED ?: '0'}</td>
+                        <td>${env.FAILED ?: '0'}</td>
+                        <td>${env.SKIPPED ?: '0'}</td>
                     </tr>
-
                 </table>
 
-                <br><br>
+                <br>
 
-                <a href="${env.BUILD_URL}artifact/target/"
-                   style="background:#27ae60;color:white;padding:10px 15px;text-decoration:none;border-radius:5px;">
-                   📊 View Reports
-                </a>
+                <a href="${env.BUILD_URL}artifact/target/">View Reports</a>
 
                 </body>
                 </html>
                 """,
 
                 mimeType: 'text/html',
-
                 attachmentsPattern: 'target/*ExtentReport*.html'
             )
         }
     }
 }
+```

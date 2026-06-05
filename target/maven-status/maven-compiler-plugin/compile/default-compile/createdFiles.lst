@@ -2,6 +2,7 @@ com\sarthak\ecommapi\pojo\AddToCart.class
 com\sarthak\ecommapi\pojo\LoginAPI.class
 com\sarthak\placeapi\pojo\Location.class
 com\sarthak\ecommapi\pojo\Product.class
+com\sarthak\utils\ReportUtil.class
 com\sarthak\api\resources\APIResources.class
 com\sarthak\oauth\pojo\Course.class
 com\sarthak\oauth\pojo\Auth.class
@@ -12,9 +13,11 @@ com\sarthak\oauth\pojo\TestData.class
 com\sarthak\placeapi\pojo\AddPlace.class
 com\sarthak\placeapi\pojo\UpdatePlace.class
 com\sarthak\ecommapi\pojo\CreateOrderDetail.class
+com\sarthak\ecommapi\pojo\ProductResponse.class
 com\sarthak\oauth\pojo\Courses.class
 com\sarthak\ecommapi\pojo\CreateOrder.class
 com\sarthak\placeapi\pojo\DeletePlace.class
+com\sarthak\ecommapi\pojo\ProductData.class
 com\sarthak\placeapi\pojo\PojoUtilities.class
 com\sarthak\api\utils\TestContext.class
 com\sarthak\oauth\pojo\GetCoursesDetails.class

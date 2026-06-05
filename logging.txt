@@ -1,5 +1,5 @@
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:15 GMT
+Date: Fri, 05 Jun 2026 16:39:55 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -14,18 +14,18 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 367
-ETag: W/"16f-IIcGea8FIfqfPdwrALwgLRxW0XI"
+ETag: W/"16f-IqV6Q7KyXMyYWjhCX64A6REWFQg"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODA2NzIyNzUsImV4cCI6MTgxMjIyOTg3NX0.EoV3IEjlGk1UFw7jCi4kJZFoihnXWGG5_JR2UgMBzP4",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2UxZDcyNTU2OGMzZTlmYjEwZTQzYWMiLCJ1c2VyRW1haWwiOiJzaWduYXR1cmVtdXNpYzEyQGdtYWlsLmNvbSIsInVzZXJNb2JpbGUiOjcyNjI1MzYyMzYsInVzZXJSb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODA2Nzc1OTUsImV4cCI6MTgxMjIzNTE5NX0.BSRCNmvw2k2BVvGjpR80mKzN0wjHwbeNX4Z0aysnywg",
     "userId": "63e1d725568c3e9fb10e43ac",
     "message": "Login Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:17 GMT
+Date: Fri, 05 Jun 2026 16:39:56 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -40,17 +40,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-rLv2Oezx3rZ8R+w0b5HtyWq8Haw"
+ETag: W/"4f-IKUqrGk2zh40nw+QjTPPVvgFs48"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a22e71517ee3e78babecd61",
+    "productId": "6a22fbdc17ee3e78babef652",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:17 GMT
+Date: Fri, 05 Jun 2026 16:39:56 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -74,7 +74,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:17 GMT
+Date: Fri, 05 Jun 2026 16:39:56 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -89,17 +89,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-qxeG0HtQ92pDHulbYfpXd6cgBQs"
+ETag: W/"4f-n1vwbhAYHfK/vUuzxFrk7uMWUuU"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a22e71517ee3e78babecd66",
+    "productId": "6a22fbdc17ee3e78babef65e",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:17 GMT
+Date: Fri, 05 Jun 2026 16:39:56 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -114,20 +114,20 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 478
-ETag: W/"1de-tSN2d5VyOh1gjK3g1UgHPkEYLX4"
+ETag: W/"1de-4trUR7PHz8HGaxTL49GE6LO2DSQ"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
-        "_id": "6a22e71517ee3e78babecd66",
+        "_id": "6a22fbdc17ee3e78babef65e",
         "productName": "Rolex Daytona 7A",
         "productCategory": "lifestyle",
         "productSubCategory": "watch",
         "productPrice": 999999,
         "productDescription": "Rolex Originals",
-        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780672277493.jpg",
+        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780677596799.jpg",
         "productRating": "0",
         "productTotalOrders": "0",
         "productStatus": true,
@@ -138,7 +138,7 @@ Connection: Keep-Alive
     "message": "Product Details fetched Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:17 GMT
+Date: Fri, 05 Jun 2026 16:39:57 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -162,7 +162,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:17 GMT
+Date: Fri, 05 Jun 2026 16:39:57 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -177,17 +177,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-LiRt64ztpy1R2XXLqP6N4VUJCtk"
+ETag: W/"4f-jIvNGbc5Bbmt1i6xBE3b1g+URTc"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a22e71517ee3e78babecd6c",
+    "productId": "6a22fbdd17ee3e78babef664",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:18 GMT
+Date: Fri, 05 Jun 2026 16:39:58 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -202,20 +202,20 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 478
-ETag: W/"1de-K948W/EV/wiUN80x3uTClecX/Ic"
+ETag: W/"1de-obiqvjGOSPSeE45dB6J8BOUn0wk"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
-        "_id": "6a22e71517ee3e78babecd6c",
+        "_id": "6a22fbdd17ee3e78babef664",
         "productName": "Rolex Daytona 7A",
         "productCategory": "lifestyle",
         "productSubCategory": "watch",
         "productPrice": 999999,
         "productDescription": "Rolex Originals",
-        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780672277949.jpg",
+        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780677597193.jpg",
         "productRating": "0",
         "productTotalOrders": "0",
         "productStatus": true,
@@ -226,7 +226,7 @@ Connection: Keep-Alive
     "message": "Product Details fetched Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:19 GMT
+Date: Fri, 05 Jun 2026 16:39:58 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -250,7 +250,7 @@ Connection: Keep-Alive
     "message": "Product Added To Cart"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:19 GMT
+Date: Fri, 05 Jun 2026 16:39:58 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -274,7 +274,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:19 GMT
+Date: Fri, 05 Jun 2026 16:39:59 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -289,17 +289,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-VtLXRO31YLHynGu2BRtku8hSnfA"
+ETag: W/"4f-t2qKWD7zzlNTDYLXuz3z03QgQ8g"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a22e71717ee3e78babecd74",
+    "productId": "6a22fbdf17ee3e78babef66c",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:19 GMT
+Date: Fri, 05 Jun 2026 16:39:59 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -314,22 +314,22 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 123
-ETag: W/"7b-dHT1lIh9/JG3jx+Toif+/HEknlc"
+ETag: W/"7b-i0WtadfaKmnDFZP88gi9vx1zfDI"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "orders": [
-        "6a22e71717ee3e78babecd78"
+        "6a22fbdf17ee3e78babef670"
     ],
     "productOrderId": [
-        "6a22e71717ee3e78babecd74"
+        "6a22fbdf17ee3e78babef66c"
     ],
     "message": "Order Placed Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:19 GMT
+Date: Fri, 05 Jun 2026 16:39:59 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -353,7 +353,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:20 GMT
+Date: Fri, 05 Jun 2026 16:39:59 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -368,17 +368,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-06at8XmnQ3Pb6XZRzVwd12FSYA8"
+ETag: W/"4f-IFm0xSBNwQRKhJ0kpPgcC5GvAyI"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a22e71817ee3e78babecd7e",
+    "productId": "6a22fbdf17ee3e78babef676",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:20 GMT
+Date: Fri, 05 Jun 2026 16:39:59 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -393,22 +393,22 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 123
-ETag: W/"7b-w0Qc4GHvIamLMXXC9pgrrBizfEw"
+ETag: W/"7b-RnXopjkNDpq3citw1YmZ+Ad1nDI"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "orders": [
-        "6a22e71817ee3e78babecd84"
+        "6a22fbdf17ee3e78babef67c"
     ],
     "productOrderId": [
-        "6a22e71817ee3e78babecd7e"
+        "6a22fbdf17ee3e78babef676"
     ],
     "message": "Order Placed Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:20 GMT
+Date: Fri, 05 Jun 2026 16:39:59 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -423,28 +423,28 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 436
-ETag: W/"1b4-h6kE2Otih3QBUZhzmeTYGBKr45M"
+ETag: W/"1b4-J6AF6xPrctW1pFDLe0VPXhzo6VI"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "data": {
-        "_id": "6a22e71817ee3e78babecd84",
+        "_id": "6a22fbdf17ee3e78babef67c",
         "orderById": "63e1d725568c3e9fb10e43ac",
         "orderBy": "signaturemusic12@gmail.com",
-        "productOrderedId": "6a22e71817ee3e78babecd7e",
+        "productOrderedId": "6a22fbdf17ee3e78babef676",
         "productName": "Rolex Daytona 7A",
         "country": "India",
         "productDescription": "Rolex Originals",
-        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780672280117.jpg",
+        "productImage": "https://rahulshettyacademy.com/api/ecom/uploads/productImage_1780677599409.jpg",
         "orderPrice": "999999",
         "__v": 0
     },
     "message": "Orders fetched for customer Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:20 GMT
+Date: Fri, 05 Jun 2026 16:39:59 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -468,7 +468,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:20 GMT
+Date: Fri, 05 Jun 2026 16:39:59 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -483,17 +483,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-5uELJJ5+vPr3DbpXYvE1Kehp300"
+ETag: W/"4f-LsmsdRc2IZvpCPZwJB1kn2IsZ1s"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a22e71817ee3e78babecd8b",
+    "productId": "6a22fbdf17ee3e78babef683",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:20 GMT
+Date: Fri, 05 Jun 2026 16:40:00 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -508,22 +508,22 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 123
-ETag: W/"7b-qCt8C8cUtt/X8awP1EFVzKaIMYI"
+ETag: W/"7b-zrmwRisamOUrDpGGwCfEoEEEYDU"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
     "orders": [
-        "6a22e71817ee3e78babecd91"
+        "6a22fbe017ee3e78babef68a"
     ],
     "productOrderId": [
-        "6a22e71817ee3e78babecd8b"
+        "6a22fbdf17ee3e78babef683"
     ],
     "message": "Order Placed Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:21 GMT
+Date: Fri, 05 Jun 2026 16:40:00 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -547,7 +547,7 @@ Connection: Keep-Alive
     "message": "Orders Deleted Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:21 GMT
+Date: Fri, 05 Jun 2026 16:40:00 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -571,7 +571,7 @@ Connection: Keep-Alive
     "message": "Product Deleted Successfully"
 }
 HTTP/1.1 201 Created
-Date: Fri, 05 Jun 2026 15:11:21 GMT
+Date: Fri, 05 Jun 2026 16:40:00 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -586,17 +586,17 @@ X-XSS-Protection: 0
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
 Content-Length: 79
-ETag: W/"4f-qJEMmGkhO1Jzl2yVRde3gJGTBPI"
+ETag: W/"4f-oEtlTMM4gsEtaRNSebv/N7OM0OE"
 Vary: Accept-Encoding
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 
 {
-    "productId": "6a22e71917ee3e78babecd99",
+    "productId": "6a22fbe017ee3e78babef69a",
     "message": "Product Added Successfully"
 }
 HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:11:21 GMT
+Date: Fri, 05 Jun 2026 16:40:01 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Content-Security-Policy: default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
 X-DNS-Prefetch-Control: off
@@ -618,1327 +618,4 @@ Connection: Keep-Alive
 
 {
     "message": "Product Deleted Successfully"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:17:06 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "fe8f9251f34398413f68d24fd17742b1",
-    "scope": "APP",
-    "reference": "6e60fa83ac44663da3f9535fa954eed96e60fa83ac44663da3f9535fa954eed9",
-    "id": "6e60fa83ac44663da3f9535fa954eed9"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:17:07 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "554767d65330f9167e54d85554a0a43e",
-    "scope": "APP",
-    "reference": "9d1f91860ac6217c9cadb53f808e12ba9d1f91860ac6217c9cadb53f808e12ba",
-    "id": "9d1f91860ac6217c9cadb53f808e12ba"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=554767d65330f9167e54d85554a0a43e
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=554767d65330f9167e54d85554a0a43e
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:17:07 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 257
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:17:10 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "38c05eed102943f4548066e784db0ff7",
-    "scope": "APP",
-    "reference": "03ae5e91fab5ecdd937e00640890804103ae5e91fab5ecdd937e006408908041",
-    "id": "03ae5e91fab5ecdd937e006408908041"
-}
-Request method:	PUT
-Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123&key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=[qaclick123, qaclick123]
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "38c05eed102943f4548066e784db0ff7",
-    "address": "100, New Street, NY",
-    "key": "qaclick123"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:17:10 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 38
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Address successfully updated"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=38c05eed102943f4548066e784db0ff7
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=38c05eed102943f4548066e784db0ff7
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:17:14 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 251
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "100, New Street, NY",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:17:16 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "6a4c06cc7a309a4d2fd578c09c300835",
-    "scope": "APP",
-    "reference": "ae51d40d525644a271ecf2d6ac553293ae51d40d525644a271ecf2d6ac553293",
-    "id": "ae51d40d525644a271ecf2d6ac553293"
-}
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "6a4c06cc7a309a4d2fd578c09c300835"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:17:17 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=6a4c06cc7a309a4d2fd578c09c300835
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=6a4c06cc7a309a4d2fd578c09c300835
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:17:20 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 67
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Get operation failed, looks like place_id  doesn't exists"
-}
-Request method:	PUT
-Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123&key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=[qaclick123, qaclick123]
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "6a4c06cc7a309a4d2fd578c09c300835",
-    "address": "100, New Street, NY",
-    "key": "qaclick123"
-}
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:17:22 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 77
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Update address operation failed, looks like the data doesn't exists"
-}
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "6a4c06cc7a309a4d2fd578c09c300835"
-}
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:17:26 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 69
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Delete operation failed, looks like the data doesn't exists"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=6a4c06cc7a309a4d2fd578c09c300835
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=6a4c06cc7a309a4d2fd578c09c300835
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:17:29 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 67
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Get operation failed, looks like place_id  doesn't exists"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:24:08 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "0ce637037b3432ca16e8e90fc18dbfd9",
-    "scope": "APP",
-    "reference": "8579e81b05e45cd40c858347fb668efd8579e81b05e45cd40c858347fb668efd",
-    "id": "8579e81b05e45cd40c858347fb668efd"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:24:09 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "06d50b0a701e2ff40e71ecfc00ceac60",
-    "scope": "APP",
-    "reference": "23605abac84774a532e3832ddf83c67523605abac84774a532e3832ddf83c675",
-    "id": "23605abac84774a532e3832ddf83c675"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=06d50b0a701e2ff40e71ecfc00ceac60
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=06d50b0a701e2ff40e71ecfc00ceac60
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:24:09 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 257
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:24:12 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "6c800bde1fbc40a519b6e2ca30f45f1d",
-    "scope": "APP",
-    "reference": "0db43071672c0d55894d69198a4d8dfb0db43071672c0d55894d69198a4d8dfb",
-    "id": "0db43071672c0d55894d69198a4d8dfb"
-}
-Request method:	PUT
-Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123&key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=[qaclick123, qaclick123]
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "6c800bde1fbc40a519b6e2ca30f45f1d",
-    "address": "100, New Street, NY",
-    "key": "qaclick123"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:24:12 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 38
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Address successfully updated"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=6c800bde1fbc40a519b6e2ca30f45f1d
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=6c800bde1fbc40a519b6e2ca30f45f1d
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:24:15 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 251
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "100, New Street, NY",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:24:18 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "ca409653f92dda8f86c49f849337abf1",
-    "scope": "APP",
-    "reference": "732e04775bb8e14b59454f1c61127f5b732e04775bb8e14b59454f1c61127f5b",
-    "id": "732e04775bb8e14b59454f1c61127f5b"
-}
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "ca409653f92dda8f86c49f849337abf1"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:24:18 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=ca409653f92dda8f86c49f849337abf1
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=ca409653f92dda8f86c49f849337abf1
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:24:21 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 67
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Get operation failed, looks like place_id  doesn't exists"
-}
-Request method:	PUT
-Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123&key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=[qaclick123, qaclick123]
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "ca409653f92dda8f86c49f849337abf1",
-    "address": "100, New Street, NY",
-    "key": "qaclick123"
-}
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:24:23 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 77
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Update address operation failed, looks like the data doesn't exists"
-}
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "ca409653f92dda8f86c49f849337abf1"
-}
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:24:26 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 69
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Delete operation failed, looks like the data doesn't exists"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=ca409653f92dda8f86c49f849337abf1
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=ca409653f92dda8f86c49f849337abf1
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:24:30 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 67
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Get operation failed, looks like place_id  doesn't exists"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:29:13 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "ddc8a47f139326b3e8528f4c6d426f25",
-    "scope": "APP",
-    "reference": "4b6d5c4aabc843e24972b0008d07248d4b6d5c4aabc843e24972b0008d07248d",
-    "id": "4b6d5c4aabc843e24972b0008d07248d"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:29:14 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "62bacf9dc9744850c5a9614cfc703ec3",
-    "scope": "APP",
-    "reference": "4171f163e29b836660548a38f84e4feb4171f163e29b836660548a38f84e4feb",
-    "id": "4171f163e29b836660548a38f84e4feb"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=62bacf9dc9744850c5a9614cfc703ec3
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=62bacf9dc9744850c5a9614cfc703ec3
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:29:14 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 257
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:29:16 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "334ceca0cffd4951b58c27143a662619",
-    "scope": "APP",
-    "reference": "cb905f8e9abb6cb5942db023790b8c35cb905f8e9abb6cb5942db023790b8c35",
-    "id": "cb905f8e9abb6cb5942db023790b8c35"
-}
-Request method:	PUT
-Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123&key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=[qaclick123, qaclick123]
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "334ceca0cffd4951b58c27143a662619",
-    "address": "100, New Street, NY",
-    "key": "qaclick123"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:29:16 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 38
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Address successfully updated"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=334ceca0cffd4951b58c27143a662619
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=334ceca0cffd4951b58c27143a662619
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:29:19 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 251
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "100, New Street, NY",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "29, side layout, cohen 09",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "French-IN"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:29:22 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "98cdd29324c5714ef31d2ca856a0833d",
-    "scope": "APP",
-    "reference": "2d0fdd51e4ddaf5ebd009f7e306c209a2d0fdd51e4ddaf5ebd009f7e306c209a",
-    "id": "2d0fdd51e4ddaf5ebd009f7e306c209a"
-}
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "98cdd29324c5714ef31d2ca856a0833d"
-}
-HTTP/1.1 200 OK
-Date: Fri, 05 Jun 2026 15:29:22 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=98cdd29324c5714ef31d2ca856a0833d
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=98cdd29324c5714ef31d2ca856a0833d
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:29:25 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 67
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Get operation failed, looks like place_id  doesn't exists"
-}
-Request method:	PUT
-Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123&key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=[qaclick123, qaclick123]
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "98cdd29324c5714ef31d2ca856a0833d",
-    "address": "100, New Street, NY",
-    "key": "qaclick123"
-}
-HTTP/1.1 404 Not Found
-Date: Fri, 05 Jun 2026 15:29:27 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Strict-Transport-Security: max-age=604800; includeSubDomains
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 77
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "msg": "Update address operation failed, looks like the data doesn't exists"
-}
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "98cdd29324c5714ef31d2ca856a0833d"
 }

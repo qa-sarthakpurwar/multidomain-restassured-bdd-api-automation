@@ -7,6 +7,8 @@ C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\EcommPojoUtilities.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\LoginAPI.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\Product.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\ProductData.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\ecommapi\pojo\ProductResponse.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\oauth\pojo\Auth.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\oauth\pojo\Course.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\oauth\pojo\Courses.java
@@ -18,3 +20,4 @@ C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\placeapi\pojo\Location.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\placeapi\pojo\PojoUtilities.java
 C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\placeapi\pojo\UpdatePlace.java
+C:\Users\qasar\git\multidomain-restassured-bdd-api-automation\src\main\java\com\sarthak\utils\ReportUtil.java
