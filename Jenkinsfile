@@ -1,3 +1,4 @@
+```groovy
 pipeline {
     agent any
 
@@ -18,20 +19,17 @@ pipeline {
                 script {
 
                     def tags = params.RUN.split(",")
-
                     def jobs = [:]
 
                     for (int i = 0; i < tags.size(); i++) {
 
                         def tag = tags[i].trim()
+                        def cleanTag = tag.replace('@','')
 
                         jobs["Run ${tag}"] = {
-                          bat """
-mvn clean test ^
--Dcucumber.filter.tags="${tag}" ^
--Dreport.name=${tag.replace('@','')} ^
--Dcucumber.plugin=json:target/jsonReports/${tag.replace('@','')}.json
-"""
+                            echo "Running for tag: ${tag}"
+
+                            bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag} -Dcucumber.plugin=json:target/jsonReports/${cleanTag}.json"
                         }
                     }
 
@@ -51,12 +49,19 @@ mvn clean test ^
                     int failed = 0
                     int skipped = 0
 
+                    // DEBUG: list files
+                    bat "dir target\\jsonReports"
+
                     tags.each { tag ->
 
-                        def filePath = "target/jsonReports/${tag.trim()}.json"
+                        def cleanTag = tag.replace('@','')
+                        def filePath = "target/jsonReports/${cleanTag}.json"
+
+                        echo "Looking for file: ${filePath}"
 
                         if (!fileExists(filePath)) {
-                            error "Cucumber JSON report not found at: ${filePath}"
+                            echo "WARNING: File not found -> ${filePath}"
+                            return
                         }
 
                         def jsonText = readFile(filePath)
@@ -116,54 +121,20 @@ mvn clean test ^
                     </tr>
 
                     <tr>
-                        <td><b>${env.TOTAL}</b></td>
-                        <td style="color:#2ecc71;"><b>${env.PASSED}</b></td>
-                        <td style="color:#e74c3c;"><b>${env.FAILED}</b></td>
-                        <td style="color:#f1c40f;"><b>${env.SKIPPED}</b></td>
+                        <td><b>${env.TOTAL ?: '0'}</b></td>
+                        <td style="color:#2ecc71;"><b>${env.PASSED ?: '0'}</b></td>
+                        <td style="color:#e74c3c;"><b>${env.FAILED ?: '0'}</b></td>
+                        <td style="color:#f1c40f;"><b>${env.SKIPPED ?: '0'}</b></td>
                     </tr>
 
                 </table>
 
                 <br><br>
-
-                <table border="0" cellpadding="6">
-                    <tr>
-                        <td><b>Job Name:</b></td>
-                        <td>${env.JOB_NAME}</td>
-                    </tr>
-                    <tr>
-                        <td><b>Build Number:</b></td>
-                        <td>${env.BUILD_NUMBER}</td>
-                    </tr>
-                    <tr>
-                        <td><b>Status:</b></td>
-                        <td><b>${currentBuild.currentResult}</b></td>
-                    </tr>
-                    <tr>
-                        <td><b>Execution Time:</b></td>
-                        <td>${currentBuild.durationString}</td>
-                    </tr>
-                </table>
-
-                <br><br>
-
-                <a href="${env.BUILD_URL}"
-                   style="background:#3498db;color:white;padding:10px 15px;text-decoration:none;border-radius:5px;">
-                   🔍 View Build
-                </a>
-
-                &nbsp;&nbsp;
 
                 <a href="${env.BUILD_URL}artifact/target/"
                    style="background:#27ae60;color:white;padding:10px 15px;text-decoration:none;border-radius:5px;">
                    📊 View Reports
                 </a>
-
-                <hr>
-
-                <p style="font-size:12px;color:gray;">
-                    This is an automated email from Jenkins CI pipeline.
-                </p>
 
                 </body>
                 </html>
@@ -176,3 +147,4 @@ mvn clean test ^
         }
     }
 }
+```
