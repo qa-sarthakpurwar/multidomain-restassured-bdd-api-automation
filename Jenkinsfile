@@ -21,6 +21,10 @@ pipeline {
 
                     def filePath = 'target/jsonReports/cucumber-report.json'
 
+                    if (!fileExists(filePath)) {
+                        error "Cucumber JSON report not found at: ${filePath}"
+                    }
+
                     def jsonText = readFile(filePath)
                     def report = new groovy.json.JsonSlurper().parseText(jsonText)
 
@@ -33,7 +37,7 @@ pipeline {
                         feature.elements.each { scenario ->
                             total++
 
-                            def statuses = scenario.steps.collect { it.result.status }
+                            def statuses = scenario.steps.collect { it?.result?.status }
 
                             if (statuses.contains("failed")) {
                                 failed++
@@ -45,7 +49,7 @@ pipeline {
                         }
                     }
 
-                    // Store values for email stage
+                    // Store values for email
                     env.TOTAL = total.toString()
                     env.PASSED = passed.toString()
                     env.FAILED = failed.toString()
@@ -61,41 +65,83 @@ pipeline {
             // Archive ALL reports
             archiveArtifacts artifacts: 'target/**/*.*', allowEmptyArchive: true
 
-            // Send Email with attachment
+            // Email Report
             emailext(
                 to: 'qa.sarthakpurwar@gmail.com',
-                subject: "Build #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
+                subject: "🚀 Build #${env.BUILD_NUMBER} | ${currentBuild.currentResult}",
+
                 body: """
-                    <h2>🚀 Automation Execution Summary</h2>
+                <html>
+                <body style="font-family:Arial;">
 
-                    <table border="1" cellpadding="10" cellspacing="0">
-                        <tr>
-                            <th>Total</th>
-                            <th>Passed</th>
-                            <th>Failed</th>
-                            <th>Skipped</th>
-                        </tr>
-                        <tr>
-                            <td>${env.TOTAL}</td>
-                            <td>${env.PASSED}</td>
-                            <td>${env.FAILED}</td>
-                            <td>${env.SKIPPED}</td>
-                        </tr>
-                    </table>
+                <h2 style="color:#2c3e50;">🚀 Automation Execution Summary</h2>
 
-                    <br><br>
+                <hr>
 
-                    <b>Job:</b> ${env.JOB_NAME}<br>
-                    <b>Build Number:</b> ${env.BUILD_NUMBER}<br>
-                    <b>Status:</b> ${currentBuild.currentResult}<br>
-                    <b>Execution Time:</b> ${currentBuild.durationString}<br>
+                <table border="1" cellpadding="8" cellspacing="0"
+                       style="border-collapse: collapse; width: 60%; text-align: center;">
 
-                    <br>
+                    <tr style="background-color:#2c3e50; color:white;">
+                        <th>Total</th>
+                        <th>Passed</th>
+                        <th>Failed</th>
+                        <th>Skipped</th>
+                    </tr>
 
-                    <a href="${env.BUILD_URL}" style="background:#3498db;color:white;padding:10px 15px;text-decoration:none;">
-                        View Build
-                    </a>
+                    <tr>
+                        <td><b>${env.TOTAL}</b></td>
+                        <td style="color:#2ecc71;"><b>${env.PASSED}</b></td>
+                        <td style="color:#e74c3c;"><b>${env.FAILED}</b></td>
+                        <td style="color:#f1c40f;"><b>${env.SKIPPED}</b></td>
+                    </tr>
+
+                </table>
+
+                <br><br>
+
+                <table border="0" cellpadding="6">
+                    <tr>
+                        <td><b>Job Name:</b></td>
+                        <td>${env.JOB_NAME}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Build Number:</b></td>
+                        <td>${env.BUILD_NUMBER}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Status:</b></td>
+                        <td><b>${currentBuild.currentResult}</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>Execution Time:</b></td>
+                        <td>${currentBuild.durationString}</td>
+                    </tr>
+                </table>
+
+                <br><br>
+
+                <a href="${env.BUILD_URL}"
+                   style="background:#3498db;color:white;padding:10px 15px;text-decoration:none;border-radius:5px;">
+                   🔍 View Build
+                </a>
+
+                &nbsp;&nbsp;
+
+                <a href="${env.BUILD_URL}artifact/target/cucumber-report.html"
+                   style="background:#27ae60;color:white;padding:10px 15px;text-decoration:none;border-radius:5px;">
+                   📊 View Report
+                </a>
+
+                <hr>
+
+                <p style="font-size:12px;color:gray;">
+                    This is an automated email from Jenkins CI pipeline.
+                </p>
+
+                </body>
+                </html>
                 """,
+
                 mimeType: 'text/html',
 
                 // Attach HTML report
