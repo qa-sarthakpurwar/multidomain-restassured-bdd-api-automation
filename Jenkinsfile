@@ -7,11 +7,16 @@ pipeline {
 
     stages {
 
+        stage('Checkout') {
+            steps {
+                deleteDir()
+                checkout scm
+            }
+        }
+
         stage('Run Tests in Parallel') {
             steps {
                 script {
-
-                    deleteDir()
 
                     def tags = params.RUN.split(",")
                     def jobs = [:]
@@ -31,8 +36,15 @@ pipeline {
 
                                 bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag}"
 
-                                // 🔥 IMPORTANT FIX: Rename report with tag
-                                bat "if exist target\\ExtentReport.html rename target\\ExtentReport.html ExtentReport-${cleanTag}.html"
+                                // 🔥 Rename with safety + debug
+                                bat """
+                                if exist target\\ExtentReport.html (
+                                    rename target\\ExtentReport.html ExtentReport-${cleanTag}.html
+                                    echo Renamed report for ${cleanTag}
+                                ) else (
+                                    echo WARNING: ExtentReport.html not found for ${cleanTag}
+                                )
+                                """
                             }
                         }
                     }
@@ -70,24 +82,24 @@ pipeline {
 
                         if (!fileExists(filePath)) {
                             echo "WARNING: Missing report for ${tag}"
-                            return
-                        }
+                        } else {
 
-                        def jsonText = readFile(filePath)
-                        def report = new groovy.json.JsonSlurper().parseText(jsonText)
+                            def jsonText = readFile(filePath)
+                            def report = new groovy.json.JsonSlurper().parseText(jsonText)
 
-                        report.each { feature ->
-                            feature.elements.each { scenario ->
-                                total++
+                            report.each { feature ->
+                                feature.elements.each { scenario ->
+                                    total++
 
-                                def statuses = scenario.steps.collect { it?.result?.status }
+                                    def statuses = scenario.steps.collect { it?.result?.status }
 
-                                if (statuses.contains("failed")) {
-                                    failed++
-                                } else if (statuses.contains("skipped")) {
-                                    skipped++
-                                } else {
-                                    passed++
+                                    if (statuses.contains("failed")) {
+                                        failed++
+                                    } else if (statuses.contains("skipped")) {
+                                        skipped++
+                                    } else {
+                                        passed++
+                                    }
                                 }
                             }
                         }
@@ -145,7 +157,7 @@ pipeline {
 
                 mimeType: 'text/html',
 
-                // 🔥 FIXED: Attach renamed reports
+                // 🔥 Attach tag-wise reports
                 attachmentsPattern: '**/target/ExtentReport-*.html'
             )
         }
