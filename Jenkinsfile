@@ -30,6 +30,9 @@ pipeline {
                                 echo "Running for tag: ${tag}"
 
                                 bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag}"
+
+                                // 🔥 IMPORTANT FIX: Rename report with tag
+                                bat "if exist target\\ExtentReport.html rename target\\ExtentReport.html ExtentReport-${cleanTag}.html"
                             }
                         }
                     }
@@ -42,7 +45,6 @@ pipeline {
         stage('Debug Reports') {
             steps {
                 script {
-                    // Check ALL parallel folders
                     bat "dir /s run-*"
                 }
             }
@@ -115,6 +117,8 @@ pipeline {
 
                 <h2>🚀 Parallel Execution Summary</h2>
 
+                <p><b>Executed Tags:</b> ${params.RUN}</p>
+
                 <table border="1" cellpadding="8" cellspacing="0">
                     <tr bgcolor="#2c3e50">
                         <th><font color="white">Total</font></th>
@@ -141,7 +145,8 @@ pipeline {
 
                 mimeType: 'text/html',
 
-                attachmentsPattern: '**/target/ExtentReport.html'
+                // 🔥 FIXED: Attach renamed reports
+                attachmentsPattern: '**/target/ExtentReport-*.html'
             )
         }
     }
