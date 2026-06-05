@@ -32,7 +32,7 @@ public class Hooks {
 	@Before("@ECommerceAPI and not @Login")
 	public void runLoginBeforeScenario(Scenario scenario) throws FileNotFoundException {
 
-		  String featureName = scenario.getUri().toString();
+		String featureName = scenario.getUri().getPath();
 
 		    System.out.println(
 		        "THREAD: " + Thread.currentThread().getId() +
