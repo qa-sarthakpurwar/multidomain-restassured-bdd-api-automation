@@ -40,6 +40,14 @@ pipeline {
                 }
             }
         }
+        
+        stage('Debug Reports') {
+    steps {
+        script {
+            bat "dir /s target"
+        }
+    }
+}
 
         stage('Parse Reports') {
             steps {
@@ -133,7 +141,7 @@ pipeline {
                 """,
 
                 mimeType: 'text/html',
-                attachmentsPattern: '**/*ExtentReport*.html'
+                attachmentsPattern: '**/target/ExtentReport.html'
             )
         }
     }
