@@ -2,6 +2,7 @@ package com.sarthak.hooks;
 
 import java.io.FileNotFoundException;
 
+
 import org.junit.Assert;
 
 import com.sarthak.api.resources.APIResources;
@@ -9,9 +10,9 @@ import com.sarthak.api.utils.TestContext;
 import com.sarthak.api.utils.Utils;
 import com.sarthak.services.AuthService;
 import com.sarthak.services.ProductService;
-import com.sarthak.stepdefinitions.EcommerceAPISteps;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.restassured.response.Response;
