@@ -22,7 +22,7 @@ Feature: Place API - CRUD Operations
   # =====================================================================
   # GET - GET PLACE
   # =====================================================================
-  @RegressionI @GetPlace @TC02
+  @Regression @GetPlace @TC02
   Scenario: TC02 - Verify place is persisted correctly after adding
     Given I have a valid add place request payload
     When I send a "POST" request to add place endpoint with "AddPlaceAPI"

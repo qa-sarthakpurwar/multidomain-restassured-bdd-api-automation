@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'RUN', defaultValue: '@ECommerce,@GooglePlace', description: 'Tags to execute (comma separated)')
+    }
+
     stages {
 
         stage('Checkout') {
@@ -9,9 +13,25 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+        stage('Run Tests in Parallel') {
             steps {
-                bat 'mvn clean test'
+                script {
+
+                    def tags = params.RUN.split(",")
+
+                    def jobs = [:]
+
+                    for (int i = 0; i < tags.size(); i++) {
+
+                        def tag = tags[i].trim()
+
+                        jobs["Run ${tag}"] = {
+                            bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${tag} -Dcucumber.plugin=json:target/jsonReports/${tag}.json"
+                        }
+                    }
+
+                    parallel jobs
+                }
             }
         }
 
@@ -19,37 +39,41 @@ pipeline {
             steps {
                 script {
 
-                    def filePath = 'target/jsonReports/cucumber-report.json'
-
-                    if (!fileExists(filePath)) {
-                        error "Cucumber JSON report not found at: ${filePath}"
-                    }
-
-                    def jsonText = readFile(filePath)
-                    def report = new groovy.json.JsonSlurper().parseText(jsonText)
+                    def tags = params.RUN.split(",")
 
                     int total = 0
                     int passed = 0
                     int failed = 0
                     int skipped = 0
 
-                    report.each { feature ->
-                        feature.elements.each { scenario ->
-                            total++
+                    tags.each { tag ->
 
-                            def statuses = scenario.steps.collect { it?.result?.status }
+                        def filePath = "target/jsonReports/${tag.trim()}.json"
 
-                            if (statuses.contains("failed")) {
-                                failed++
-                            } else if (statuses.contains("skipped")) {
-                                skipped++
-                            } else {
-                                passed++
+                        if (!fileExists(filePath)) {
+                            error "Cucumber JSON report not found at: ${filePath}"
+                        }
+
+                        def jsonText = readFile(filePath)
+                        def report = new groovy.json.JsonSlurper().parseText(jsonText)
+
+                        report.each { feature ->
+                            feature.elements.each { scenario ->
+                                total++
+
+                                def statuses = scenario.steps.collect { it?.result?.status }
+
+                                if (statuses.contains("failed")) {
+                                    failed++
+                                } else if (statuses.contains("skipped")) {
+                                    skipped++
+                                } else {
+                                    passed++
+                                }
                             }
                         }
                     }
 
-                    // Store values for email
                     env.TOTAL = total.toString()
                     env.PASSED = passed.toString()
                     env.FAILED = failed.toString()
@@ -62,10 +86,8 @@ pipeline {
     post {
         always {
 
-            // Archive ALL reports
             archiveArtifacts artifacts: 'target/**/*.*', allowEmptyArchive: true
 
-            // Email Report
             emailext(
                 to: 'qa.sarthakpurwar@gmail.com',
                 subject: "🚀 Build #${env.BUILD_NUMBER} | ${currentBuild.currentResult}",
@@ -127,9 +149,9 @@ pipeline {
 
                 &nbsp;&nbsp;
 
-                <a href="${env.BUILD_URL}artifact/target/cucumber-report.html"
+                <a href="${env.BUILD_URL}artifact/target/"
                    style="background:#27ae60;color:white;padding:10px 15px;text-decoration:none;border-radius:5px;">
-                   📊 View Report
+                   📊 View Reports
                 </a>
 
                 <hr>
@@ -144,8 +166,7 @@ pipeline {
 
                 mimeType: 'text/html',
 
-                // Attach HTML report
-                attachmentsPattern: 'target/cucumber-report.html'
+                attachmentsPattern: 'target/**/*.html'
             )
         }
     }
