@@ -32,6 +32,13 @@ public class Hooks {
 	@Before("@ECommerceAPI and not @Login")
 	public void runLoginBeforeScenario(Scenario scenario) throws FileNotFoundException {
 
+		  String featureName = scenario.getUri().toString();
+
+		    System.out.println(
+		        "THREAD: " + Thread.currentThread().getId() +
+		        " | FEATURE: " + featureName +
+		        " | SCENARIO: " + scenario.getName()
+		    );
 		System.out.println("Running login before: " + scenario.getName());
 
 		RequestSpecification request = authService.login();
