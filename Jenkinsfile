@@ -166,7 +166,7 @@ pipeline {
 
                 mimeType: 'text/html',
 
-                attachmentsPattern: 'target/**/*.html'
+                attachmentsPattern: 'target/*ExtentReport*.html'
             )
         }
     }
