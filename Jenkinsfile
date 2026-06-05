@@ -26,7 +26,12 @@ pipeline {
                         def tag = tags[i].trim()
 
                         jobs["Run ${tag}"] = {
-                            bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${tag} -Dcucumber.plugin=json:target/jsonReports/${tag}.json"
+                          bat """
+mvn clean test ^
+-Dcucumber.filter.tags="${tag}" ^
+-Dreport.name=${tag.replace('@','')} ^
+-Dcucumber.plugin=json:target/jsonReports/${tag.replace('@','')}.json
+"""
                         }
                     }
 
