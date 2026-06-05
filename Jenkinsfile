@@ -63,7 +63,7 @@ pipeline {
 
             // Send Email with attachment
             emailext(
-                to: 'your-email@gmail.com',
+                to: 'qa.sarthakpurwar@gmail.com',
                 subject: "Build #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
                 body: """
                     <h2>🚀 Automation Execution Summary</h2>
