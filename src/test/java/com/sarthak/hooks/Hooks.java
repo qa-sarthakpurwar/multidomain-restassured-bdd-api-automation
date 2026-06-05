@@ -32,13 +32,6 @@ public class Hooks {
 	@Before("@ECommerceAPI and not @Login")
 	public void runLoginBeforeScenario(Scenario scenario) throws FileNotFoundException {
 
-		String featureName = scenario.getUri().getPath();
-
-		    System.out.println(
-		        "THREAD: " + Thread.currentThread().getId() +
-		        " | FEATURE: " + featureName +
-		        " | SCENARIO: " + scenario.getName()
-		    );
 		System.out.println("Running login before: " + scenario.getName());
 
 		RequestSpecification request = authService.login();
@@ -54,16 +47,28 @@ public class Hooks {
 		Utils.setProperty("token", token);
 		Utils.setProperty("userId", userId);
 	}
-	
-	  @After
-	    public void afterScenario(Scenario scenario) {
 
-	        if (scenario.isFailed()) {
-	            ReportUtil.log("❌ Scenario Failed: " + scenario.getName());
-	        } else {
-	            ReportUtil.log("✅ Scenario Passed: " + scenario.getName());
-	        }
-	    }
+	@Before
+	public void logThreadInfo(Scenario scenario) {
+
+		String feature = scenario.getUri() != null ? scenario.getUri().getPath() : "UNKNOWN_FEATURE";
+
+		System.out.println("================================");
+		System.out.println("THREAD   : " + Thread.currentThread().getId());
+		System.out.println("FEATURE  : " + feature);
+		System.out.println("SCENARIO : " + scenario.getName());
+		System.out.println("================================");
+	}
+
+	@After
+	public void afterScenario(Scenario scenario) {
+
+		if (scenario.isFailed()) {
+			ReportUtil.log("❌ Scenario Failed: " + scenario.getName());
+		} else {
+			ReportUtil.log("✅ Scenario Passed: " + scenario.getName());
+		}
+	}
 
 	@After("@ECommerce and not @DeleteProduct and not @Login")
 	public void runCleanupScenario(Scenario scenario) throws FileNotFoundException {
