@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features", plugin = { "pretty","json:target/jsonReports/cucumber.json",
+		features = "src\\test\\resources\\features", plugin = {"json:target/jsonReports/cucumber.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"html:target/cucumber-report.html", "com.sarthak.listeners.StepLogger" },
 

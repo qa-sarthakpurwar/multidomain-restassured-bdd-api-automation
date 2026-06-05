@@ -7,63 +7,77 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
-        stage('Run Tests') {
+        stage('Run Tests in Parallel') {
             steps {
                 script {
 
                     def tags = params.RUN.split(",")
+                    def jobs = [:]
 
                     for (int i = 0; i < tags.size(); i++) {
 
                         def tag = tags[i].trim()
                         def cleanTag = tag.replace('@','')
 
-                        echo "Running for tag: ${tag}"
+                        jobs["Run ${tag}"] = {
 
-                        bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag}"
+                            dir("run-${cleanTag}") {
+
+                                // Fresh checkout for each parallel run
+                                checkout scm
+
+                                echo "Running for tag: ${tag}"
+
+                                bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag}"
+
+                            }
+                        }
                     }
+
+                    parallel jobs
                 }
             }
         }
 
-        stage('Parse Cucumber Report') {
+        stage('Parse Reports') {
             steps {
                 script {
 
-                    def filePath = "target/jsonReports/cucumber.json"
-
-                    echo "Looking for file: ${filePath}"
-
-                    if (!fileExists(filePath)) {
-                        error "Cucumber JSON report not found!"
-                    }
-
-                    def jsonText = readFile(filePath)
-                    def report = new groovy.json.JsonSlurper().parseText(jsonText)
+                    def tags = params.RUN.split(",")
 
                     int total = 0
                     int passed = 0
                     int failed = 0
                     int skipped = 0
 
-                    report.each { feature ->
-                        feature.elements.each { scenario ->
-                            total++
+                    tags.each { tag ->
 
-                            def statuses = scenario.steps.collect { it?.result?.status }
+                        def cleanTag = tag.replace('@','')
+                        def filePath = "run-${cleanTag}/target/jsonReports/cucumber.json"
 
-                            if (statuses.contains("failed")) {
-                                failed++
-                            } else if (statuses.contains("skipped")) {
-                                skipped++
-                            } else {
-                                passed++
+                        echo "Reading: ${filePath}"
+
+                        if (!fileExists(filePath)) {
+                            echo "WARNING: Missing report for ${tag}"
+                            return
+                        }
+
+                        def jsonText = readFile(filePath)
+                        def report = new groovy.json.JsonSlurper().parseText(jsonText)
+
+                        report.each { feature ->
+                            feature.elements.each { scenario ->
+                                total++
+
+                                def statuses = scenario.steps.collect { it?.result?.status }
+
+                                if (statuses.contains("failed")) {
+                                    failed++
+                                } else if (statuses.contains("skipped")) {
+                                    skipped++
+                                } else {
+                                    passed++
+                                }
                             }
                         }
                     }
@@ -80,7 +94,8 @@ pipeline {
     post {
         always {
 
-            archiveArtifacts artifacts: 'target/**/*.*', allowEmptyArchive: true
+            // Archive ALL reports from all runs
+            archiveArtifacts artifacts: '**/target/**/*.*', allowEmptyArchive: true
 
             emailext(
                 to: 'qa.sarthakpurwar@gmail.com',
@@ -88,11 +103,11 @@ pipeline {
 
                 body: """
                 <html>
-                <body style="font-family:Arial;">
+                <body>
 
-                <h2>🚀 Automation Execution Summary</h2>
+                <h2>🚀 Parallel Execution Summary</h2>
 
-                <table border="1" cellpadding="8" cellspacing="0" style="width:60%; text-align:center;">
+                <table border="1" cellpadding="8" cellspacing="0">
                     <tr>
                         <th>Total</th>
                         <th>Passed</th>
@@ -109,14 +124,14 @@ pipeline {
 
                 <br>
 
-                <a href="${env.BUILD_URL}artifact/target/">View Reports</a>
+                <a href="${env.BUILD_URL}artifact/">📊 View All Reports</a>
 
                 </body>
                 </html>
                 """,
 
                 mimeType: 'text/html',
-                attachmentsPattern: 'target/*ExtentReport*.html'
+                attachmentsPattern: '**/*ExtentReport*.html'
             )
         }
     }
