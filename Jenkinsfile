@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'RUN', defaultValue: '@ECommerce,@GooglePlace', description: 'Tags to execute (comma separated)')
+        string(name: 'RUN', defaultValue: '@ECommerce,@GooglePlace', description: 'Tags')
     }
 
     stages {
@@ -21,28 +21,26 @@ pipeline {
                     def tags = params.RUN.split(",")
                     def jobs = [:]
 
-                    for (int i = 0; i < tags.size(); i++) {
+                    tags.each { tag ->
 
-                        def tag = tags[i].trim()
-                        def cleanTag = tag.replace('@','')
+                        def cleanTag = tag.trim().replace('@','')
 
-                        jobs["Run ${tag}"] = {
+                        jobs["Run ${cleanTag}"] = {
 
                             dir("run-${cleanTag}") {
 
                                 checkout scm
 
-                                echo "Running for tag: ${tag}"
+                                echo "Running tag: ${tag}"
 
                                 bat "mvn clean test -Dcucumber.filter.tags=\"${tag}\" -Dreport.name=${cleanTag}"
 
-                                // 🔥 Rename with safety + debug
                                 bat """
                                 if exist target\\ExtentReport.html (
                                     rename target\\ExtentReport.html ExtentReport-${cleanTag}.html
                                     echo Renamed report for ${cleanTag}
                                 ) else (
-                                    echo WARNING: ExtentReport.html not found for ${cleanTag}
+                                    echo WARNING: ExtentReport missing for ${cleanTag}
                                 )
                                 """
                             }
@@ -50,14 +48,6 @@ pipeline {
                     }
 
                     parallel jobs
-                }
-            }
-        }
-
-        stage('Debug Reports') {
-            steps {
-                script {
-                    bat "dir /s run-*"
                 }
             }
         }
@@ -75,17 +65,13 @@ pipeline {
 
                     tags.each { tag ->
 
-                        def cleanTag = tag.replace('@','')
+                        def cleanTag = tag.trim().replace('@','')
                         def filePath = "run-${cleanTag}/target/jsonReports/cucumber.json"
 
-                        echo "Reading: ${filePath}"
+                        if (fileExists(filePath)) {
 
-                        if (!fileExists(filePath)) {
-                            echo "WARNING: Missing report for ${tag}"
-                        } else {
-
-                            def jsonText = readFile(filePath)
-                            def report = new groovy.json.JsonSlurper().parseText(jsonText)
+                            def json = readFile(filePath)
+                            def report = new groovy.json.JsonSlurper().parseText(json)
 
                             report.each { feature ->
                                 feature.elements.each { scenario ->
@@ -102,6 +88,9 @@ pipeline {
                                     }
                                 }
                             }
+
+                        } else {
+                            echo "Missing report: ${filePath}"
                         }
                     }
 
@@ -121,43 +110,36 @@ pipeline {
 
             emailext(
                 to: 'qa.sarthakpurwar@gmail.com',
-                subject: "🚀 Build #${env.BUILD_NUMBER} | ${currentBuild.currentResult}",
+                subject: "Build #${env.BUILD_NUMBER} | ${currentBuild.currentResult}",
 
                 body: """
                 <html>
                 <body>
 
-                <h2>🚀 Parallel Execution Summary</h2>
+                <h2>Parallel Execution Summary</h2>
 
                 <p><b>Executed Tags:</b> ${params.RUN}</p>
 
-                <table border="1" cellpadding="8" cellspacing="0">
+                <table border="1" cellpadding="8">
                     <tr bgcolor="#2c3e50">
                         <th><font color="white">Total</font></th>
                         <th><font color="white">Passed</font></th>
                         <th><font color="white">Failed</font></th>
                         <th><font color="white">Skipped</font></th>
                     </tr>
-
                     <tr>
-                        <td><b>${env.TOTAL ?: '0'}</b></td>
-                        <td><font color="green"><b>${env.PASSED ?: '0'}</b></font></td>
-                        <td><font color="red"><b>${env.FAILED ?: '0'}</b></font></td>
-                        <td><font color="orange"><b>${env.SKIPPED ?: '0'}</b></font></td>
+                        <td>${env.TOTAL ?: '0'}</td>
+                        <td><font color="green">${env.PASSED ?: '0'}</font></td>
+                        <td><font color="red">${env.FAILED ?: '0'}</font></td>
+                        <td><font color="orange">${env.SKIPPED ?: '0'}</font></td>
                     </tr>
                 </table>
-
-                <br>
-
-                <a href="${env.BUILD_URL}artifact/">📊 View All Reports</a>
 
                 </body>
                 </html>
                 """,
 
                 mimeType: 'text/html',
-
-                // 🔥 Attach tag-wise reports
                 attachmentsPattern: '**/target/ExtentReport-*.html'
             )
         }
