@@ -1,0 +1,9 @@
+<extentreports>
+    <configuration>
+        <theme>DARK</theme>
+        <documentTitle>Sarthak Automation Report</documentTitle>
+        <reportName>Revenue Management API Test Execution</reportName>
+        <encoding>UTF-8</encoding>
+        <timelineEnabled>true</timelineEnabled>
+    </configuration>
+</extentreports>

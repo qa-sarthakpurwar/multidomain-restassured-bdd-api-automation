@@ -9,9 +9,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 
 		features = "src\\test\\resources\\features", plugin = { "json:target/jsonReports/cucumber-report.json",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"html:target/cucumber-report.html", "com.sarthak.listeners.StepLogger" },
 
-		glue = { "com.sarthak.stepdefinitions", "com.sarthak.hooks" }, tags = "@ECommerce",
+		glue = { "com.sarthak.stepdefinitions", "com.sarthak.hooks" }, tags = "@GooglePlace",
 
 		// ── Report ─────────────────────────────────────────────────
 

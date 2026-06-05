@@ -2,7 +2,6 @@ package com.sarthak.hooks;
 
 import java.io.FileNotFoundException;
 
-
 import org.junit.Assert;
 
 import com.sarthak.api.resources.APIResources;
@@ -10,9 +9,9 @@ import com.sarthak.api.utils.TestContext;
 import com.sarthak.api.utils.Utils;
 import com.sarthak.services.AuthService;
 import com.sarthak.services.ProductService;
+import com.sarthak.utils.ReportUtil;
 
 import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.restassured.response.Response;
@@ -48,6 +47,16 @@ public class Hooks {
 		Utils.setProperty("token", token);
 		Utils.setProperty("userId", userId);
 	}
+	
+	  @After
+	    public void afterScenario(Scenario scenario) {
+
+	        if (scenario.isFailed()) {
+	            ReportUtil.log("❌ Scenario Failed: " + scenario.getName());
+	        } else {
+	            ReportUtil.log("✅ Scenario Passed: " + scenario.getName());
+	        }
+	    }
 
 	@After("@ECommerce and not @DeleteProduct and not @Login")
 	public void runCleanupScenario(Scenario scenario) throws FileNotFoundException {
