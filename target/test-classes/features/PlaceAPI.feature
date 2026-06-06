@@ -10,7 +10,7 @@ Feature: Place API - CRUD Operations
   # =====================================================================
   # POST - ADD PLACE
   # =====================================================================
-  @Regression @AddPlace @TC01
+ @AddPlace @TC01
   Scenario: TC01 - Verify user can add a place with valid payload
     Given I have a valid add place request payload
     When I send a "POST" request to add place endpoint with "AddPlaceAPI"
@@ -22,7 +22,7 @@ Feature: Place API - CRUD Operations
   # =====================================================================
   # GET - GET PLACE
   # =====================================================================
-  @Regression @GetPlace @TC02
+ @GetPlace @TC02
   Scenario: TC02 - Verify place is persisted correctly after adding
     Given I have a valid add place request payload
     When I send a "POST" request to add place endpoint with "AddPlaceAPI"
@@ -39,7 +39,7 @@ Feature: Place API - CRUD Operations
   # =====================================================================
   # PUT - UPDATE PLACE
   # =====================================================================
-  @Regression @UpdatePlace @TC03
+ @UpdatePlace @TC03
   Scenario: TC03 - Verify user can update the address of an existing place
     Given I have a valid add place request payload
     When I send a "POST" request to add place endpoint with "AddPlaceAPI"
@@ -56,7 +56,7 @@ Feature: Place API - CRUD Operations
   # =====================================================================
   # DELETE - DELETE PLACE
   # =====================================================================
-  @Regression @DeletePlace @TC04
+ @DeletePlace @TC04
   Scenario: TC04 - Verify user can delete an existing place
     Given I have a valid add place request payload
     When I send a "POST" request to add place endpoint with "AddPlaceAPI"
@@ -73,7 +73,7 @@ Feature: Place API - CRUD Operations
   # =====================================================================
   # NEGATIVE - UPDATE PLACE
   # =====================================================================
-  @Regression @UpdatePlace @TC05
+@UpdatePlace @TC05
   Scenario: TC05 - Verify API fails when invalid place_id is used in update request
     Given I have an invalid place_id
     Given I have a valid update place request with new address
@@ -84,7 +84,7 @@ Feature: Place API - CRUD Operations
   # =====================================================================
   # NEGATIVE - DELETE PLACE
   # =====================================================================
-  @Regression @DeletePlace @TC06
+ @DeletePlace @TC06
   Scenario: TC06 - Verify API fails when non-existing place_id is used in delete request
     Given I have an invalid place_id
     Given I have a valid delete place request with  valid  stored placeId
@@ -95,7 +95,7 @@ Feature: Place API - CRUD Operations
   # =====================================================================
   # NEGATIVE - GET PLACE
   # =====================================================================
-  @Regression @GetPlace @TC07
+ @GetPlace @TC07
   Scenario: TC07 - Verify API fails with invalid or non-existing place_id in delete request
     Given I have an invalid place_id
     Given I have a valid get place request

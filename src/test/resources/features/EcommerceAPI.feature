@@ -10,7 +10,7 @@ Feature: E-Commerce API - CRUD Operations
   # =====================================================================
   # LOGIN
   # =====================================================================
-  @Regression @Login @TC01
+  @Login @TC01
   Scenario: TC01 - Verify user can login with valid credentials
     Given I have a valid login request payload
     When I send a "POST" request to endpoint with "LoginAPI"
@@ -22,7 +22,7 @@ Feature: E-Commerce API - CRUD Operations
   # =====================================================================
   # ADD PRODUCT
   # =====================================================================
-  @Regression @AddProduct @TC02
+ @AddProduct @TC02
   Scenario: TC02 - Verify user can add a product with valid payload
     Given I have a valid add product request payload
     When I send a "POST" request to endpoint with "AddProductAPI"
@@ -34,7 +34,7 @@ Feature: E-Commerce API - CRUD Operations
   # =====================================================================
   # GET PRODUCT DETAIL
   # =====================================================================
-  @Regression @GetProduct @TC03
+ @GetProduct @TC03
   Scenario: TC03 - Verify product is persisted correctly after adding
     Given I have a valid add product request payload
     When I send a "POST" request to endpoint with "AddProductAPI"
@@ -48,7 +48,7 @@ Feature: E-Commerce API - CRUD Operations
 # ADD PRODUCT  TO CART
 # =====================================================================
 
-  @Regression @AddToCart @TC04
+   @AddToCart @TC04
   Scenario: TC04 - Verify user can add product to cart
     Given I have a valid add product request payload
     When I send a "POST" request to endpoint with "AddProductAPI"
@@ -65,7 +65,7 @@ Feature: E-Commerce API - CRUD Operations
   # =====================================================================
   # CREATE ORDER
   # =====================================================================
-  @Regression @CreateOrder @TC05
+ @CreateOrder @TC05
   Scenario: TC05 - Verify user can create an order successfully
     Given I have a valid add product request payload
     When I send a "POST" request to endpoint with "AddProductAPI"
@@ -80,7 +80,7 @@ Feature: E-Commerce API - CRUD Operations
   # =====================================================================
   # GET ORDER
   # =====================================================================
-  @Regression @GetOrder @TC06
+ @GetOrder @TC06
   Scenario: TC06 - Verify order is persisted correctly after creation
     Given I have a valid add product request payload
     When I send a "POST" request to endpoint with "AddProductAPI"
@@ -97,7 +97,7 @@ Feature: E-Commerce API - CRUD Operations
   # =====================================================================
   # DELETE ORDER
   # =====================================================================
-  @Regression @DeleteOrder @TC07
+ @DeleteOrder @TC07
   Scenario: TC07 - Verify user can delete an existing order
     Given I have a valid add product request payload
     When I send a "POST" request to endpoint with "AddProductAPI"
@@ -114,7 +114,7 @@ Feature: E-Commerce API - CRUD Operations
   # =====================================================================
   # DELETE PRODUCT
   # =====================================================================
-  @Regression @DeleteProduct @TC08
+ @DeleteProduct @TC08
   Scenario: TC08 - Verify user can delete an existing product
     Given I have a valid add product request payload
     When I send a "POST" request to endpoint with "AddProductAPI"
