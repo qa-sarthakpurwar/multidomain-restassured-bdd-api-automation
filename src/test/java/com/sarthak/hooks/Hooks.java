@@ -71,19 +71,27 @@ public class Hooks {
 
         System.out.println("Running cleanup after: " + scenario.getName());
 
-        String productId = context.getResponseMap()
-                .get("addProductResponse")
-                .jsonPath()
-                .getString("productId");
+        Response addProductResponse =
+                context.getResponseMap().get("addProductResponse");
 
-        if (productId != null) {
-
-            RequestSpecification request = productService.deleteProduct(productId);
-
-            Response response = request.when()
-                    .delete(APIResources.DeleteProductAPI.getResource());
-
-            Assert.assertEquals(200, response.getStatusCode());
+        if (addProductResponse == null) {
+            System.out.println("SKIPPING CLEANUP: addProductResponse is NULL for scenario: "
+                    + scenario.getName());
+            return;
         }
+
+        String productId = addProductResponse.jsonPath().getString("productId");
+
+        if (productId == null) {
+            System.out.println("SKIPPING CLEANUP: productId is NULL");
+            return;
+        }
+
+        Response response = productService
+                .deleteProduct(productId)
+                .when()
+                .delete(APIResources.DeleteProductAPI.getResource());
+
+        Assert.assertEquals(200, response.getStatusCode());
     }
 }
