@@ -32,6 +32,7 @@ public class Hooks {
 	@Before("@ECommerceAPI and not @Login")
 	public void runLoginBeforeScenario(Scenario scenario) throws FileNotFoundException {
 
+
 		System.out.println("Running login before: " + scenario.getName());
 
 		RequestSpecification request = authService.login();
@@ -48,17 +49,6 @@ public class Hooks {
 		Utils.setProperty("userId", userId);
 	}
 
-	@Before
-	public void logThreadInfo(Scenario scenario) {
-
-		String feature = scenario.getUri() != null ? scenario.getUri().getPath() : "UNKNOWN_FEATURE";
-
-		System.out.println("================================");
-		System.out.println("THREAD   : " + Thread.currentThread().getId());
-		System.out.println("FEATURE  : " + feature);
-		System.out.println("SCENARIO : " + scenario.getName());
-		System.out.println("================================");
-	}
 
 	@After
 	public void afterScenario(Scenario scenario) {

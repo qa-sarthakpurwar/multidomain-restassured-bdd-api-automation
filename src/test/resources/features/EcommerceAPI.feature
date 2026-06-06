@@ -1,4 +1,4 @@
-@ECommerce
+@Regression @ECommerce
 Feature: E-Commerce API - CRUD Operations
 # =============================================================================
 # Author      : qa-sarthakpurwar

@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'RUN', defaultValue: '@ECommerce,@GooglePlace', description: 'Tags')
+        string(name: 'RUN', defaultValue: '@Regression', description: 'Tags')
     }
 
     stages {

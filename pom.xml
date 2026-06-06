@@ -101,7 +101,7 @@
 			<version>20240303</version>
 		</dependency>
 
-		<!-- Source: https://mvnrepository.com/artifact/junit/junit -->
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -136,8 +136,7 @@
 			<version>7.34.3</version> <!-- IMPORTANT: match your cucumber version -->
 		</dependency>
 
-		<!-- Source:
-		https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>

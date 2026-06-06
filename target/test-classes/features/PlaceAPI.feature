@@ -1,4 +1,4 @@
-@GooglePlace
+@Regression @GooglePlace
 Feature: Place API - CRUD Operations
   As a QA Engineer
   I want to validate the Place API endpoints
