@@ -1,66 +1,77 @@
 package com.sarthak.api.utils;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.sarthak.ecommapi.pojo.ProductData;
-
+import java.util.*;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import com.sarthak.ecommapi.pojo.ProductData;
 
 public class TestContext {
 
-	private static String baseUri;
-	private static String authorizationCode;
-	private static String accessToken;
+    private static ThreadLocal<String> baseUri = new ThreadLocal<>();
+    private static ThreadLocal<String> authorizationCode = new ThreadLocal<>();
+    private static ThreadLocal<String> accessToken = new ThreadLocal<>();
 
-	private Map<String, Response> responseMap = new HashMap<>();
-	private Map<String, RequestSpecification> requestMap = new HashMap<>();
-	private ProductData productData;
+    private static ThreadLocal<Map<String, Response>> responseMap =
+            ThreadLocal.withInitial(HashMap::new);
 
-	public Map<String, Response> getResponseMap() {
-		return responseMap;
-	}
+    private static ThreadLocal<Map<String, RequestSpecification>> requestMap =
+            ThreadLocal.withInitial(HashMap::new);
 
-	public Map<String, RequestSpecification> getRequestMap() {
-		return requestMap;
-	}
+    private static ThreadLocal<ProductData> productData = new ThreadLocal<>();
 
-	public ProductData getProductData() {
-		return productData;
-	}
+    // BaseUri
+    public String getBaseUri() {
+        return baseUri.get();
+    }
 
-	public void setProductData(ProductData productData) {
-		this.productData = productData;
-	}
+    public void setBaseUri(String value) {
+        baseUri.set(value);
+    }
 
-	public void setBaseUri(String baseUri) {
-		this.baseUri = baseUri;
-	}
+    // Access Token
+    public String getAccessToken() {
+        return accessToken.get();
+    }
 
-	public String getBaseUri() {
-		return baseUri;
-	}
+    public void setAccessToken(String value) {
+        accessToken.set(value);
+    }
 
-	public String getAuthorizationCode() {
-		return authorizationCode;
-	}
+    // Authorization Code
+    public String getAuthorizationCode() {
+        return authorizationCode.get();
+    }
 
-	public void setAuthorizationCode(String authorizationCode) {
-		this.authorizationCode = authorizationCode;
-	}
+    public void setAuthorizationCode(String value) {
+        authorizationCode.set(value);
+    }
 
-	public String getAccessToken() {
-		return accessToken;
-	}
+    // Response Map
+    public Map<String, Response> getResponseMap() {
+        return responseMap.get();
+    }
 
-	public void setAccessToken(String accessToken) {
-		this.accessToken = accessToken;
-	}
+    // Request Map
+    public Map<String, RequestSpecification> getRequestMap() {
+        return requestMap.get();
+    }
 
-	public static final List<String> EXPECTED_TITLES = Arrays.asList("Selenium Webdriver Java", "Cypress", "Protractor",
-			"Rest Assured Automation using Java", "SoapUI Webservices testing", "Appium-Mobile Automation using Java");
+    // Product Data
+    public ProductData getProductData() {
+        return productData.get();
+    }
 
+    public void setProductData(ProductData data) {
+        productData.set(data);
+    }
+
+    // IMPORTANT CLEANUP (optional but good)
+    public void clear() {
+        baseUri.remove();
+        authorizationCode.remove();
+        accessToken.remove();
+        responseMap.remove();
+        requestMap.remove();
+        productData.remove();
+    }
 }

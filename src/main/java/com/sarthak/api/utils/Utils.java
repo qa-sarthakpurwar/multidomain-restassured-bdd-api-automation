@@ -53,18 +53,14 @@ public class Utils {
 	}
 
 	public static RequestSpecification getPlaceRequestSpec() throws FileNotFoundException {
-		if (requestSpec == null) {
 
-			PrintStream log = new PrintStream(new FileOutputStream("logging.txt", true));
+		String fileName = "logging-" + Thread.currentThread().getId() + ".txt";
 
-			requestSpec = new RequestSpecBuilder().setBaseUri(getProperty("base.url"))
-					.addQueryParam("key", getProperty("api.key")).addFilter(RequestLoggingFilter.logRequestTo(log))
-					.addFilter(ResponseLoggingFilter.logResponseTo(log)).setContentType(ContentType.JSON).build();
-			return requestSpec;
+		PrintStream log = new PrintStream(new FileOutputStream(fileName, true));
 
-		}
-
-		return requestSpec;
+		return new RequestSpecBuilder().setBaseUri(getProperty("base.url")).addQueryParam("key", getProperty("api.key"))
+				.addFilter(RequestLoggingFilter.logRequestTo(log)).addFilter(ResponseLoggingFilter.logResponseTo(log))
+				.setContentType(ContentType.JSON).build();
 	}
 
 	// ── Parse JSON response and get value by key ───────────────────
@@ -97,77 +93,67 @@ public class Utils {
 
 			PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
 
-			requestSpec =  new RequestSpecBuilder()
-	                .setBaseUri(getProperty("base.url"))
-	                .addHeader("Authorization", getProperty("token"))
-	                //.addFilter(new RequestLoggingFilter(LogDetail.ALL, true, log))
-	                .addFilter(new ResponseLoggingFilter(LogDetail.ALL, true, log))
-	                .build();
+			requestSpec = new RequestSpecBuilder().setBaseUri(getProperty("base.url"))
+					.addHeader("Authorization", getProperty("token"))
+					// .addFilter(new RequestLoggingFilter(LogDetail.ALL, true, log))
+					.addFilter(new ResponseLoggingFilter(LogDetail.ALL, true, log)).build();
 			return requestSpec;
 
 		}
 
 		return requestSpec;
-}
-	
-	
-	// ── Read Json File───────────────────
-	
-	 public static TestData testData;
-
-	    static {
-	        try {
-	            ObjectMapper mapper = new ObjectMapper();
-	            testData = mapper.readValue(
-	                new File("src\\test\\resources\\TestData\\OAuthCourse.json"),
-	                TestData.class
-	            );
-	        } catch (Exception e) {
-	            throw new RuntimeException(e);
-	        }
-	    }
-
-	    public static TestData getTestData() {
-	        return testData;
-	    }
-	    
-	    
-	    public static ProductData productData;
-
-	    static {
-	        try {
-	            ObjectMapper mapper = new ObjectMapper();
-	            productData = mapper.readValue(
-	                new File("src\\test\\resources\\TestData\\ProductDetails.json"),
-	                ProductData.class
-	            );
-	        } catch (Exception e) {
-	            throw new RuntimeException(e);
-	        }
-	    }
-
-	    public static ProductData getProductData() {
-	        return productData;
-	    }
-	
-	
-	public static List<String> getProductDataList() {
-	    List<String> data = new ArrayList<>();
-	    data.add(getProperty("productId"));
-	    data.add(getProperty("productName"));
-	    data.add(getProperty("productCategory"));
-	    data.add("watch");
-	    data.add(getProperty("productPrice"));
-	    data.add(getProperty("productDescription"));
-	    data.add(getProperty("data.productImage"));
-	    data.add("0");
-	    data.add("0");
-	    data.add("true");
-	    data.add(getProperty("productFor"));
-	    data.add(getProperty("userId"));
-	    data.add("0");
-	    data.add(getProperty("userId"));
-	    return data;
 	}
-	
+
+	// ── Read Json File───────────────────
+
+	public static TestData testData;
+
+	static {
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+			testData = mapper.readValue(new File("src\\test\\resources\\TestData\\OAuthCourse.json"), TestData.class);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public static TestData getTestData() {
+		return testData;
+	}
+
+	public static ProductData productData;
+
+	static {
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+			productData = mapper.readValue(new File("src\\test\\resources\\TestData\\ProductDetails.json"),
+					ProductData.class);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public static ProductData getProductData() {
+		return productData;
+	}
+
+	public static List<String> getProductDataList() {
+		List<String> data = new ArrayList<>();
+		data.add(getProperty("productId"));
+		data.add(getProperty("productName"));
+		data.add(getProperty("productCategory"));
+		data.add("watch");
+		data.add(getProperty("productPrice"));
+		data.add(getProperty("productDescription"));
+		data.add(getProperty("data.productImage"));
+		data.add("0");
+		data.add("0");
+		data.add("true");
+		data.add(getProperty("productFor"));
+		data.add(getProperty("userId"));
+		data.add("0");
+		data.add(getProperty("userId"));
+		return data;
+	}
+
 }

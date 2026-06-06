@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"html:target/cucumber-report.html", "com.sarthak.listeners.StepLogger" },
 
-		glue = { "com.sarthak.stepdefinitions", "com.sarthak.hooks" }, tags = "@GooglePlace",
+		glue = { "com.sarthak.stepdefinitions", "com.sarthak.hooks" }, tags = "@Regression",
 
 		// ── Report ─────────────────────────────────────────────────
 
